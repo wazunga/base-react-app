@@ -1,6 +1,7 @@
 {
-  "name": "base-app",
+  "name": "base-react-app",
   "version": "0.1.0",
+  "description": "Base template made with react, reach-router and tailwindcss",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
