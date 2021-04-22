@@ -8,7 +8,7 @@ import SiteStatus from './pages/SiteStatus'
 const App = () => (
   <Router>
     <Home path="/" />
-    <Login path="login"/>
+	<Login path="login"/>
     <Dashboard path="dashboard" />
     <SiteStatus default />
   </Router>
