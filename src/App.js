@@ -1,7 +1,17 @@
 import React from 'react'
+import { Router } from '@reach/router'
+import Dashboard from './pages/Dashboard'
+import Home from './pages/Home'
+import Login from './pages/Login'
+import SiteStatus from './pages/SiteStatus'
 
 const App = () => (
-  <div><h1>Welcome to base-react-app</h1></div>
+  <Router>
+    <Home path="/" />
+    <Login path="login"/>
+    <Dashboard path="dashboard" />
+    <SiteStatus default />
+  </Router>
 )
 
-export default App;
+export default App
