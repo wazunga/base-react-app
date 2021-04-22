@@ -6,7 +6,7 @@ const ErrorDisplay = ({img, title, message, background="bg-white"}) => (
             <div className="items-center md:flex bg-red-300">
 	
 				<div className="flex items-center justify-center w-full md:mt-0 md:w-1/2 md:order-2 bg-gray-300">
-                    <img className="w-full h-full max-w-2xl" src={img}/>
+                    <img alt="error-logo" className="w-full h-full max-w-2xl" src={img}/>
                 </div>
 
 				<div className="w-full md:w-1/2 md:order-1 mt-6">
