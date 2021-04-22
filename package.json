@@ -15,11 +15,11 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-		"prettier": "prettier --config .prettierrc 'src/**/*.js' --write"
+    "start": "craco start",
+    "build": "craco build",
+    "test": "craco test",
+    "eject": "craco eject",
+	"prettier": "prettier --config .prettierrc 'src/**/*.js' --write"
   },
   "eslintConfig": {
     "extends": [
