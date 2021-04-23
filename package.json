@@ -19,7 +19,7 @@
     "build": "craco build",
     "test": "craco test",
     "eject": "craco eject",
-	"prettier": "prettier --config .prettierrc 'src/**/*.js' --write"
+    "prettier": "prettier --config .prettierrc 'src/**/*.js' --write"
   },
   "eslintConfig": {
     "extends": [
