@@ -9,6 +9,7 @@ export const DashboardMainContent = () => (
       <a
         href="https://kamona-wd.github.io/kwd-dashboard/"
         target="_blank"
+        rel="noreferrer"
         class="inline-block text-blue-600 hover:underline"
       >
         Live
@@ -16,6 +17,7 @@ export const DashboardMainContent = () => (
       <a
         href="https://github.com/Kamona-WD/kwd-dashboard"
         target="_blank"
+        rel="noreferrer"
         class="inline-block text-blue-600 hover:underline"
       >
         Github repo
