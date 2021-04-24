@@ -1,12 +1,12 @@
 import React from 'react'
 
-const ErrorDisplay = ({ img, title, message, background = 'bg-white' }) => (
+export const ErrorDisplay = ({ img, title, message, background = 'bg-white' }) => (
   <header
     className={` ${background} dark:bg-gray-800 flex items-center h-screen`}
   >
-    <div className="container px-6 py-16 mx-auto bg-blue-300">
-      <div className="items-center md:flex bg-red-300">
-        <div className="flex items-center justify-center w-full md:mt-0 md:w-1/2 md:order-2 bg-gray-300">
+    <div className="container px-6 py-16 mx-auto">
+      <div className="items-center md:flex">
+        <div className="flex items-center justify-center w-full md:mt-0 md:w-1/2 md:order-2">
           <img alt="error-logo" className="w-full h-full max-w-2xl" src={img} />
         </div>
 
@@ -29,4 +29,3 @@ const ErrorDisplay = ({ img, title, message, background = 'bg-white' }) => (
   </header>
 )
 
-export default ErrorDisplay

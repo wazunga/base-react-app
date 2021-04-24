@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react'
-import ErrorDisplay from '../../components/ErrorDisplay/ErrorDisplay'
+import {ErrorDisplay} from '../../components/ErrorDisplay/ErrorDisplay'
 import errorTest from '../../assets/testErrorDisplay.svg'
 
 const SiteStatus = () => (
