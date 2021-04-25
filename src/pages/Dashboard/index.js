@@ -22,6 +22,7 @@ export const Dashboard = () => (
           <Section title="Dashboard Home" path="/" />
           <Section title="Link 1" path="link1" />
           <Section title="Link 2" path="link2" />
+          <Section title="Not found" default />
         </Router>
       </DashboardMainContent>
     </DashboardContent>
