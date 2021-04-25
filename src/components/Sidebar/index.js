@@ -6,8 +6,8 @@ import { SidenavLinksContainer } from './SidenavLinksContainer'
 export const Sidebar = () => (
   <Sidenav>
     <SidenavLinksContainer>
-      <SidenavLinks title="link 1" link="/dashboard" />
-      <SidenavLinks title="link 2" link="/dashboard" />
+      <SidenavLinks title="link 1" link="link1" />
+      <SidenavLinks title="link 2" link="link2" />
     </SidenavLinksContainer>
   </Sidenav>
 )
