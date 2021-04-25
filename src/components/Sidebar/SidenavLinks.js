@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { HomeIcon, ChevronDownIcon } from '@heroicons/react/outline'
 import { Link } from '@reach/router'
 
@@ -30,4 +31,9 @@ export const SidenavLinks = (props) => {
       <Header {...props} />
     </>
   )
+}
+
+SidenavLinks.propTypes = {
+  title: PropTypes.string.isRequired,
+  link: PropTypes.string.isRequired
 }

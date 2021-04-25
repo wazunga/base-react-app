@@ -1,5 +1,6 @@
-import { Router } from '@reach/router'
 import React from 'react'
+import PropTypes from 'prop-types'
+import { Router } from '@reach/router'
 import { DashboardNav } from '../../components/DashboardNav'
 import { Sidebar } from '../../components/Sidebar'
 import { DashboardContainer } from './DashboardContainer'
@@ -11,6 +12,10 @@ const Section = ({ title }) => (
     <h1 className="text-2xl">{title}</h1>
   </div>
 )
+
+Section.propTypes = {
+  title: PropTypes.string.isRequired
+}
 
 export const Dashboard = () => (
   <DashboardContainer>
