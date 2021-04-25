@@ -1,7 +1,6 @@
 import { Link } from '@reach/router'
 import React from 'react'
 
-
 export const Brand = ({ title }) => (
   <Link
     to="/dashboard"
