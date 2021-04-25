@@ -1,22 +1,28 @@
-import React, {Fragment} from 'react'
+import React from 'react'
 
-export const Contact = ({phone, email, address}) => (
-	<Fragment>
+export const Contact = ({phone, email, address}) => {
 
-        <div className="space-y-2 text-sm">
-          <p className="text-base font-bold tracking-wide text-gray-900">
-            Contacts
-          </p>
-          <div className="flex">
-            <p className="mr-1 text-gray-800">Phone: {phone}</p>
-          </div>
-          <div className="flex">
-            <p className="mr-1 text-gray-800">Email: {email}</p>
-          </div>
-          <div className="flex">
-            <p className="mr-1 text-gray-800">Address: {address}</p>
-          </div>
-        </div>
-	</Fragment>
-)
+	const ContactMain = ({children}) => (
+		<div className='lg:mr-5 lg:ml-8 text-sm'>
+			{children}	
+		</div>
+	)
+
+	const ContactElement = ({label, value}) => (	
+		<div className="flex">
+			<p className="mr-1 text-gray-800">{label}: {value}</p>
+		</div>
+	)
+
+	return(
+		<ContactMain>
+		  <p className="text-base font-bold tracking-wide text-gray-900">
+				Contacts
+		  </p>
+			<ContactElement label='Phone' value={phone}/>
+			<ContactElement label="Email" value={email}/>
+			<ContactElement label='Address' value={address}/>
+		</ContactMain>
+	)
+}
 
