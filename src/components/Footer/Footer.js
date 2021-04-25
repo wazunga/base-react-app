@@ -33,6 +33,10 @@ export const Footer = ({infoCompanyData}) => {
 				{...infoCompanyData}
 			/>
     </FooterMain>
-  );
+  )
 };
+
+
+
+
 

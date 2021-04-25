@@ -1,8 +1,8 @@
 import React from 'react'
 import { Link } from '@reach/router'
+import PropTypes from 'prop-types'
 
-export const CompanyInfo = ({companyInfo, logo, companyName}) => {
-	
+export const CompanyInfo = ({companyInfo, logo, companyName}) => {	
 	const CompanyInfoMain = ({children}) => (	
 		<div className="mr-12 mb-3">
 			{children}
@@ -32,5 +32,10 @@ export const CompanyInfo = ({companyInfo, logo, companyName}) => {
 			</div>
 		</CompanyInfoMain>
 	)
+}
+CompanyInfo.propTypes = {
+	companyName: PropTypes.string.isRequired,	
+	companyInfo: PropTypes.string.isRequired,
+	logo: PropTypes.string.isRequired
 }
 

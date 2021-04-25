@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react'
 import { Link } from '@reach/router'
+import PropTypes from 'prop-types'
 
 export const CopyrightLink = ({ text, href }) => (
   <Fragment>
@@ -11,3 +12,7 @@ export const CopyrightLink = ({ text, href }) => (
     </Link>
   </Fragment>
 )
+CopyrightLink.propTypes = {
+	text: PropTypes.string.isRequired,
+	href: PropTypes.string.isRequired,
+}

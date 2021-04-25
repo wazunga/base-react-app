@@ -1,12 +1,11 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import {SocialNetworks} from './SocialNetworks'
-
 import facebook from '../../assets/facebook.svg'
 import twitter from '../../assets/twitter.svg'
 import instagram from '../../assets/instagram.svg'
 
-export const Social = ({description}) => {
-	
+export const Social = ({description}) => {	
 	const SocialMain = ({children}) => (	
 		<div className='lg:ml-20 lg:w-1/3'>
 				{children}
@@ -45,4 +44,6 @@ export const Social = ({description}) => {
 		</SocialMain>
 	)
 }
-
+Social.propTypes = {
+	description: PropTypes.string.isRequired,
+}
