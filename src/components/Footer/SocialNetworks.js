@@ -1,4 +1,4 @@
-import React, {Fragment} from 'react'
+import React, { Fragment } from 'react'
 import { Link } from '@reach/router'
 
 export const SocialNetworks = ({href, img, alt}) => (
@@ -15,4 +15,3 @@ export const SocialNetworks = ({href, img, alt}) => (
       </Link>
 	</Fragment>
 )
-

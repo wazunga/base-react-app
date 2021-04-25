@@ -1,6 +1,11 @@
 import React from 'react'
 
-export const ErrorDisplay = ({ img, title, message, background = 'bg-white' }) => (
+export const ErrorDisplay = ({
+  img,
+  title,
+  message,
+  background = 'bg-white'
+}) => (
   <header
     className={` ${background} dark:bg-gray-800 flex items-center h-screen`}
   >
@@ -28,4 +33,3 @@ export const ErrorDisplay = ({ img, title, message, background = 'bg-white' }) =
     </div>
   </header>
 )
-

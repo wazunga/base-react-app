@@ -1,8 +1,8 @@
 import React from 'react'
 import { CompanyInfo } from './CompanyInfo'
-import {Contact} from './Contact'
-import {Social} from './Social'
-import {Copyright} from './Copyright'
+import { Contact } from './Contact'
+import { Social } from './Social'
+import { Copyright } from './Copyright'
 
 
 export const Footer = ({infoCompanyData}) => {
