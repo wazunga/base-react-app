@@ -1,15 +1,16 @@
 import React from 'react'
 import { HomeIcon, ChevronDownIcon } from '@heroicons/react/outline'
+import { Link } from '@reach/router'
 
 /** Componente que es parte de SidenavLinks, en donde se hace enlace
  * al modulo que hace referencia.
  */
 export const SidenavLinks = (props) => {
   // Header del grupo de links
-  const Header = ({ title }) => (
-    <a
+  const Header = ({ title, link }) => (
+    <Link
       className="flex items-center p-2 text-gray-500 transition-colors rounded-md dark:text-light hover:bg-blue-100 dark:hover:bg-blue-600"
-      href="/"
+      to={link}
     >
       {/* Module icon*/}
       <span>
@@ -21,7 +22,7 @@ export const SidenavLinks = (props) => {
         {' '}
         <ChevronDownIcon className="w-5 h-5" />{' '}
       </span>
-    </a>
+    </Link>
   )
   // TODO: Hacer el dropdown y agregar links del modulo
   return (
