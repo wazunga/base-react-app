@@ -1,10 +1,11 @@
-import React, {Fragment} from 'react'
+import React from 'react'
 import {Footer} from '../../components/Footer/Footer'
 import {Navbar} from '../../components/Navbar/Navbar'
+import {ContentHome} from './ContentHome'
 import logo from '../../assets/logo.svg'
 
-const Home = () => {
-	
+export const Home = () => {
+
 	const infoCompanyData = { 
 		companyInfo: 'Lacinia semper nibh. Aenean diam odio, scelerisque at, ullamcorper nec, tincidunt. Sit amet lectus. Fusce lacinia mauris vita nisl interdum condimentum. Etiam.',
 		companyName: 'Wazunga Inc',
@@ -14,22 +15,22 @@ const Home = () => {
 		address: 'Quis justo id tortor accumsan tempus. Cras vitae magna.', 
 		description: 'Bibendum orci leo blandit lacus. In id velit sodales arcu iaculis venenatis. Etiam at leo. Vivamus vitae sem. Mauris volutpat congue risus.' 
 	}
+	const HomeContainer = ({children}) => (
+		<div>
+			{children}
+		</div>
+	)
 	return(
-		<Fragment>
+		<HomeContainer>
 			<Navbar
 				{...infoCompanyData}
 			/>
+			<ContentHome/>
 			<Footer 
 				className='bg-red-300'
 				infoCompanyData = {infoCompanyData}
 			/>
-		</Fragment>
+		</HomeContainer>
 	)
 }
 
-export default Home
-
-//tipado de los props
-//objeto json de los datos de la empresa
-//custom container
-//cuando se pasan props por mas de un nivel se usa ...props

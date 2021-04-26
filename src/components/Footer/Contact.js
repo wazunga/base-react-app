@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 export const Contact = ({phone, email, address}) => {
 	const ContactMain = ({children}) => (
-		<div className='lg:mr-5 lg:ml-8 text-sm'>
+		<div className='lg:mr-5 lg:ml-8 text-sm mb-3'>
 			{children}	
 		</div>
 	)
