@@ -3,7 +3,7 @@ import { Sidenav } from './Sidenav'
 import { SidenavLinks } from './SidenavLinks'
 import { SidenavLinksContainer } from './SidenavLinksContainer'
 
-export const Sidebar = () => (
+export const DashboardSidebar = () => (
   <Sidenav>
     <SidenavLinksContainer>
       <SidenavLinks title="link 1" link="link1" />
