@@ -6,7 +6,6 @@ import { useDropdown } from '../../hooks/useDropdown'
 export const LinksDropdown = ({ title, path, links }) => {
 
   const [isDropdownOPen, onClickDropdown, openClasses] = useDropdown()
-  console.log(openClasses)
 
   return (
     <>
@@ -27,6 +26,23 @@ export const LinksDropdown = ({ title, path, links }) => {
           <ChevronDownIcon className="w-5 h-5" />{' '}
         </span>
       </div>
+      {isDropdownOPen && 
+      <div className="mt-2 space-y-2 px-7">
+        {/*TODO hacer un manejo del estado de los items con un array, 
+          useActive(itemIndex), entonces se actualizara el estado del 
+          item en esa posicion
+          */}
+        {links.map((link, index) => (
+          <Link 
+            id={index} 
+            to={link.path} 
+            role="menuitem" 
+            className="block p-2 text-sm text-gray-500 transition-colors duration-200 rounded-md dark:text-light dark:hover:text-light hover:text-gray-700">
+            {link.title}
+          </Link>
+        ))}
+      </div>
+      }
     </>
   )
 }
