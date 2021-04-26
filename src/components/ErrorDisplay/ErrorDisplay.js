@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-export const ErrorDisplay = ({ img, title, message, background = 'bg-white'}) => {
+export const ErrorDisplay = ({ img, title, message, background}) => {
 	const ErrorDisplayMain = ({children}) => (	
 		<div
 			className={` ${background} dark:bg-gray-800 flex items-center h-screen flex justify-center px-6 py-16`}			 
@@ -44,4 +44,8 @@ ErrorDisplay.propTypes = {
 	img: PropTypes.string.isRequired,
 	title: PropTypes.string.isRequired,
 	message: PropTypes.string.isRequired,
+	background: PropTypes.string,
+}
+ErrorDisplay.defaultProps = {
+	background: 'bg-white'
 }

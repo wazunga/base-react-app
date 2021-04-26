@@ -16,6 +16,7 @@ export const Footer = ({infoCompanyData}) => {
 				{children}
 			</div>
 	)
+
   return (
 		<FooterMain>
 			<FooterInfo>
