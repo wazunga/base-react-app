@@ -1,11 +1,12 @@
 import React from 'react'
 import { useIsOpen } from '../../hooks/useIsOpen'
-import { useIsActiveClasses } from '../../hooks/useIsActiveClasses'
+// import { useIsActiveClasses } from '../../hooks/useIsActiveClasses'
+import { Transition } from '@headlessui/react'
 
 export const Avatar = () => {
-  const avatarMenuClasses = ['absolute hidden right-0 w-48 py-1 bg-white rounded-md shadow-lg top-12 ring-1 ring-black ring-opacity-5 dark:bg-dark focus:outline-none', 'absolute right-0 w-48 py-1 bg-white rounded-md shadow-lg top-12 ring-1 ring-black ring-opacity-5 dark:bg-dark focus:outline-none']
+  // const avatarMenuClasses = ['absolute hidden right-0 w-48 py-1 bg-white rounded-md shadow-lg top-12 ring-1 ring-black ring-opacity-5 dark:bg-dark focus:outline-none', 'absolute right-0 w-48 py-1 bg-white rounded-md shadow-lg top-12 ring-1 ring-black ring-opacity-5 dark:bg-dark focus:outline-none transform transition ease-out delay-150 duration-300']
 
-  const [classes] = useIsActiveClasses(avatarMenuClasses)
+  // const [classes] = useIsActiveClasses(avatarMenuClasses)
   const [isMenuOpen, handleIsMenuOpen] = useIsOpen(false)
 
   return (
@@ -21,17 +22,27 @@ export const Avatar = () => {
           alt="Ahmed Kamel"
         />
       </button>
-      <div className={`${classes(isMenuOpen)}`}>
-        <span role="menuitem" class="block px-4 py-2 text-sm text-gray-700 transition-colors hover:bg-gray-100 dark:text-light dark:hover:bg-blue-600">
-          Your Profile
-        </span>
-        <span role="menuitem" class="block px-4 py-2 text-sm text-gray-700 transition-colors hover:bg-gray-100 dark:text-light dark:hover:bg-blue-600">
-          Logout
-        </span>
-        <span role="menuitem" class="block px-4 py-2 text-sm text-gray-700 transition-colors hover:bg-gray-100 dark:text-light dark:hover:bg-blue-600">
-          Settings
-        </span>
-      </div>
+      {/*Avatar menu dropdown*/}
+      <Transition
+        show={isMenuOpen}
+        enter="transition-all transform ease-out"
+        enterFrom="translate-y-1/2 opacity-0"
+        enterTo="translate-y-0 opacity-100"
+        leave="transition-all transform ease-in"
+        leaveFrom="translate-y-0 opacity-100"
+        leaveTo="translate-y-1/2 opacity-0"
+        className="absolute right-0 w-48 py-1 bg-white rounded-md shadow-lg top-12 ring-1 ring-black ring-opacity-5 dark:bg-dark focus:outline-none"
+      >
+          <span role="menuitem" className="block px-4 py-2 text-sm text-gray-700 transition-colors hover:bg-gray-100 dark:text-light dark:hover:bg-blue-600">
+            Your Profile
+          </span>
+          <span role="menuitem" className="block px-4 py-2 text-sm text-gray-700 transition-colors hover:bg-gray-100 dark:text-light dark:hover:bg-blue-600">
+            Logout
+          </span>
+          <span role="menuitem" className="block px-4 py-2 text-sm text-gray-700 transition-colors hover:bg-gray-100 dark:text-light dark:hover:bg-blue-600">
+            Settings
+          </span>
+      </Transition>
     </div>
   )
 }
