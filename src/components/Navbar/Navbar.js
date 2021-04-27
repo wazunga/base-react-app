@@ -7,7 +7,7 @@ import loginLogo from '../../assets/login.svg'
 export const Navbar= ({logo, companyName}) => {
 	const [navbarOpen, setNavbarOpen]= useState(false)
 	const NavbarMain = ({children}) => (	
-		<nav className="relative flex relative block flex-wrap items-center justify-between px-4 py-3 bg-green-700">
+		<nav className="relative flex block flex-wrap items-center justify-between px-4 py-3 bg-green-700">
 			{children}
 		</nav>
 	)

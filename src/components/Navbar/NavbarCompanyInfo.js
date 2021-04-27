@@ -15,7 +15,6 @@ export const NavbarCompanyInfo = ({logo, companyName}) => (
 		<span className='text-xl font-bold tracking-wide uppercase'>{companyName}</span>
 	</Link>
 )
-
 NavbarCompanyInfo.propTypes = {
 	logo: PropTypes.string.isRequired,
 	companyName: PropTypes.isRequired,
