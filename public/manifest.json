@@ -1,6 +1,8 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "manifest_version": 2,
+  "version": "1.0.0",
+  "short_name": "rt-dashboard",
+  "name": "Dashboard app build with React + Tailwindcss",
   "icons": [
     {
       "src": "favicon.ico",

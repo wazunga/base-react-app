@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Router } from '@reach/router'
 import { DashboardNav } from '../../components/DashboardNav'
-import { Sidebar } from '../../components/Sidebar'
+import { DashboardSidebar } from '../../components/DashboardSidebar'
 import { DashboardContainer } from './DashboardContainer'
 import { DashboardContent } from './DashboardContent'
 import { DashboardMainContent } from './DashboarMainContent'
@@ -19,7 +19,7 @@ Section.propTypes = {
 
 export const Dashboard = () => (
   <DashboardContainer>
-    <Sidebar />
+    <DashboardSidebar />
     <DashboardContent>
       <DashboardNav />
       <DashboardMainContent>
