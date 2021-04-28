@@ -6,7 +6,7 @@ export const SocialNetworks = ({href, img, alt}) => (
 	<Fragment>	
 			<Link
 				to={href}
-				className="transform hover:scale-125 duration-350 hover:opacity-60"
+				className="transition transform hover:scale-125 duration-350 hover:opacity-60 focus:outline-none"
 			>
 				<img
 					className='rounded-full w-6'

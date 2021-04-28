@@ -3,6 +3,9 @@ import {Footer} from '../../components/Footer/Footer'
 import {Navbar} from '../../components/Navbar/Navbar'
 import {ContentHome} from './ContentHome'
 import logo from '../../assets/logo.svg'
+import facebook from '../../assets/facebook.svg'
+import twitter from '../../assets/twitter.svg'
+import instagram from '../../assets/instagram.svg'
 
 export const Home = () => {
 
@@ -13,7 +16,24 @@ export const Home = () => {
 		phone: '878734-87346',
 		email: 'example@example.com',
 		address: 'Quis justo id tortor accumsan tempus. Cras vitae magna.', 
-		description: 'Bibendum orci leo blandit lacus. In id velit sodales arcu iaculis venenatis. Etiam at leo. Vivamus vitae sem. Mauris volutpat congue risus.' 
+		descriptionContact: 'Bibendum orci leo blandit lacus. In id velit sodales arcu iaculis venenatis. Etiam at leo. Vivamus vitae sem. Mauris volutpat congue risus.',  
+		SocialNetworkListData: [
+			{
+				href: '/',
+				img: facebook,
+				alt: 'facebook',
+			},
+			{
+				href:'/',
+				img: twitter,
+				alt: 'twitter'
+			},
+			{
+				href: '/',
+				img: instagram,
+				alt: 'instagram'
+			},
+		]
 	}
 	const HomeContainer = ({children}) => (
 		<div>

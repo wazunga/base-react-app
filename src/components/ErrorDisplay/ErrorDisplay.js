@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import {ErrorDisplayButton} from './ErrorDisplayButton'
 
 export const ErrorDisplay = ({ img, title, message, background}) => {
 	const ErrorDisplayMain = ({children}) => (	
@@ -19,11 +20,6 @@ export const ErrorDisplay = ({ img, title, message, background}) => {
 			{children}
 		</div>
 	)
-	const ErrorDisplayButton = ({btnLabel}) => (	
-		<button className="px-3 py-2 mt-4 mr-2 text-sm font-medium text-white uppercase bg-indigo-600 rounded-md hover:bg-indigo-500 focus:outline-none focus:bg-indigo-500">
-			{btnLabel}
-		</button>
-	)
 	return (
 		<ErrorDisplayMain>
 			<ImgContainer>
@@ -34,9 +30,11 @@ export const ErrorDisplay = ({ img, title, message, background}) => {
 					{title}
 				</h1>
 				<p className="mt-2 text-gray-600 dark:text-gray-400">{message}</p>
-				<ErrorDisplayButton btnLabel='Retroceder'/>
-				<ErrorDisplayButton btnLabel='Inicio' />
-			</ErrorDisplayContent>
+				<div className='mt-5 flex'>
+					<ErrorDisplayButton btnLabel='Retroceder'/>
+					<ErrorDisplayButton btnLabel='Inicio' />
+				</div>
+				</ErrorDisplayContent>
 		</ErrorDisplayMain>
 	)
 }

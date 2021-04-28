@@ -3,7 +3,7 @@ import { Link } from '@reach/router'
 
 export const NavbarButton = ({logo, altLogo, titleButton, textButton}) => (	
 	<Link
-		className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-black hover:opacity-60 transition ease-in-out duration-350 transform hover:scale-110"
+		className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-black hover:opacity-60 transition ease-in-out duration-350 transform hover:scale-110 focus:outline-none"
 		to="/"
 
 		title={titleButton?titleButton:''}
