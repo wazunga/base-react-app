@@ -1,11 +1,12 @@
-import React, { useState } from 'react'
+import React from 'react'
 import {NavbarCompanyInfo} from './NavbarCompanyInfo'
 import {NavbarButtons} from './NavbarButtons'
+import {useIsOpen} from '../../hooks/useIsOpen'
 import menu from '../../assets/menu.svg'
 import loginLogo from '../../assets/login.svg'
 
 export const Navbar= ({logo, companyName}) => {
-	const [navbarOpen, setNavbarOpen]= useState(false)
+	const [isOpen, handleIsOpen] = useIsOpen(false)
 	const NavbarMain = ({children}) => (	
 		<nav className="relative flex block flex-wrap items-center justify-between px-4 py-3 bg-green-700">
 			{children}
@@ -23,7 +24,7 @@ export const Navbar= ({logo, companyName}) => {
 				<button
 					className="text-black cursor-pointer text-xl w-12 leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none transform hover:scale-125 duration-350 hover:opacity-60"
 					type="button"
-					onClick={() => setNavbarOpen(!navbarOpen)}
+					onClick={handleIsOpen}
 				>
 					<img
 						src={menu}
@@ -33,7 +34,7 @@ export const Navbar= ({logo, companyName}) => {
 				</button>
 			</NavbarCompany>
 			<NavbarButtons 
-				navbarOpen={navbarOpen} 
+				isOpen={isOpen} 
 				loginLogo={loginLogo}
 			/>
 		</NavbarMain>

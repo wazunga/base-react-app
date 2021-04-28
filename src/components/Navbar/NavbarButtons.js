@@ -3,12 +3,12 @@ import { Link } from '@reach/router'
 import PropTypes from 'prop-types'
 import {NavbarButton} from './NavbarButton'
 
-export const NavbarButtons = ({navbarOpen, loginLogo}) => {
+export const NavbarButtons = ({isOpen, loginLogo}) => {
 	const ButtonsContainer = ({children}) => (	
 		<div
 			className={
 					"lg:flex flex-grow items-center " +
-					(navbarOpen ? " flex" : " hidden")
+					(isOpen ? " flex" : " hidden")
 				}
 				id="example-navbar-danger"
 		>
