@@ -6,7 +6,7 @@ export const SocialNetworkList = ({SocialNetworkListData}) => (
 		{
 			SocialNetworkListData.map((socialNetwork, id) => (
 				<SocialNetworks
-					id={id}
+					key={id}
 					img={socialNetwork.img}
 					href={socialNetwork.href}
 					alt={socialNetwork.alt}

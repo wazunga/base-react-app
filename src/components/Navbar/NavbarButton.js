@@ -1,13 +1,21 @@
 import React from 'react'
 import { Link } from '@reach/router'
+import PropTypes from 'prop-types'
 
-export const NavbarButton = ({logo, altLogo, titleButton, textButton}) => (	
+export const NavbarButton = ({IconButton, altLogo, titleButton, textButton}) => (	
 	<Link
-		className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-black hover:opacity-60 transition ease-in-out duration-350 transform hover:scale-110 focus:outline-none"
+		className="flex items-center px-3 py-2 text-xs font-bold leading-snug text-black uppercase hover:opacity-60 transition ease-in-out duration-350 transform hover:scale-110 focus:outline-none"
 		to="/"
 
 		title={titleButton?titleButton:''}
 	>
-		<img src={logo} className='w-5' alt='altLogo'/> <span className="ml-2">{textButton}</span>
+		<IconButton className='w-5' alt={altLogo}/> <span className="ml-2">{textButton}</span>
 	</Link>
 )
+
+NavbarButton.propTypes = {
+	IconButton: PropTypes.func.isRequired,
+	altLogo: PropTypes.string.isRequired,
+	titleButton: PropTypes.string.isRequired,
+	textButton: PropTypes.string.isRequired
+}

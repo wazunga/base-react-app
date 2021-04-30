@@ -1,9 +1,9 @@
 import React from 'react'
-import { Link } from '@reach/router'
 import PropTypes from 'prop-types'
 import {NavbarButton} from './NavbarButton'
+import { LoginIcon } from '@heroicons/react/outline'
 
-export const NavbarButtons = ({isOpen, loginLogo}) => {
+export const NavbarButtons = ({isOpen}) => {
 	const ButtonsContainer = ({children}) => (	
 		<div
 			className={
@@ -17,10 +17,10 @@ export const NavbarButtons = ({isOpen, loginLogo}) => {
 	)
 	return(
 		<ButtonsContainer>
-			<ul className="flex flex-col lg:flex-row list-none lg:ml-auto">
+			<ul className="flex flex-col list-none lg:flex-row lg:ml-auto">
 				<li className="nav-item">
 					<NavbarButton  
-						logo={loginLogo}
+						IconButton={LoginIcon}
 						altLogo='login-logo'
 						textButton='Registrarse'
 						titleButton='registarse'
@@ -32,6 +32,5 @@ export const NavbarButtons = ({isOpen, loginLogo}) => {
 }
 
 NavbarButtons.propTypes = {
-	navbarOpen: PropTypes.bool.isRequired,
-	login: PropTypes.string.isRequired,
+	isOpen: PropTypes.bool.isRequired,
 }

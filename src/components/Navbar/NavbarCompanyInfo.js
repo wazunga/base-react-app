@@ -1,21 +1,16 @@
 import React from 'react'
 import { Link } from '@reach/router'
-import PropTypes from 'prop-types'
 
-export const NavbarCompanyInfo = ({logo, companyName}) => (	
+export const NavbarCompanyInfo = ({companyLogo, companyName}) => (	
 	<Link
-		className="text-sm font-bold  inline-flex mr-4 py-2 whitespace-nowrap uppercase text-white"
+		className="inline-flex py-2 mr-4 text-sm font-bold text-white uppercase whitespace-nowrap"
 		to="/"
 	>
 		<img
-		src={logo}
-		className='rounded-full w-8 mx-3'
+		src={companyLogo}
+		className='w-8 mx-3 rounded-full'
 		alt='logo'
 		/>
 		<span className='text-xl font-bold tracking-wide uppercase'>{companyName}</span>
 	</Link>
 )
-NavbarCompanyInfo.propTypes = {
-	logo: PropTypes.string.isRequired,
-	companyName: PropTypes.isRequired,
-}

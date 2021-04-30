@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 
 export const Contact = ({phone, email, address}) => {
 	const ContactMain = ({children}) => (
@@ -24,8 +23,3 @@ export const Contact = ({phone, email, address}) => {
 	)
 }
 
-Contact.propTypes = {
-	phone: PropTypes.string.isRequired,
-	email: PropTypes.string.isRequired,
-	address: PropTypes.string.isRequired,
-}

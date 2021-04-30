@@ -1,10 +1,10 @@
 import React from 'react'
 import { Link } from '@reach/router'
-import PropTypes from 'prop-types'
 
-export const CompanyInfo = ({companyInfo, logo, companyName}) => {	
+export const CompanyInfo = ({companyInfo, companyLogo, companyName}) => {
+	console.log('CN: ' + companyName)
 	const CompanyInfoMain = ({children}) => (	
-		<div className="mr-12 mb-3">
+		<div className="mb-3 mr-12">
 			{children}
 		</div>
 	)
@@ -17,7 +17,7 @@ export const CompanyInfo = ({companyInfo, logo, companyName}) => {
 				className="inline-flex items-center"
 			>
 				<img 
-					src={logo}
+					src={companyLogo}
 					className='w-7'
 					alt='logo empresa'
 				/>
@@ -32,10 +32,5 @@ export const CompanyInfo = ({companyInfo, logo, companyName}) => {
 			</div>
 		</CompanyInfoMain>
 	)
-}
-CompanyInfo.propTypes = {
-	companyName: PropTypes.string.isRequired,	
-	companyInfo: PropTypes.string.isRequired,
-	logo: PropTypes.string.isRequired
 }
 

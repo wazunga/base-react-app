@@ -1,9 +1,10 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import {SocialNetworkList} from './SocialNetworkList'
-export const Social = ({descriptionContact, SocialNetworkListData}) => {	
+
+export const Social = ({descriptionContact, SocialNetworkListData}) => {
+	console.log(SocialNetworkListData)
 	const SocialMain = ({children}) => (	
-		<div className='lg:ml-20 lg:w-1/3 mb-3'>
+		<div className='mb-3 lg:ml-20 lg:w-1/3'>
 				{children}
 			</div>
 	)
@@ -27,7 +28,4 @@ export const Social = ({descriptionContact, SocialNetworkListData}) => {
 			</p>
 		</SocialMain>
 	)
-}
-Social.propTypes = {
-	descriptionContact: PropTypes.string.isRequired,
 }

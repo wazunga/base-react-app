@@ -1,28 +1,28 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import {NavbarCompanyInfo} from './NavbarCompanyInfo'
 import {NavbarButtons} from './NavbarButtons'
-import {useIsOpen} from '../../hooks/useIsOpen'
 import menu from '../../assets/menu.svg'
-import loginLogo from '../../assets/login.svg'
+import {useIsOpen} from '../../hooks/useIsOpen'
 
-export const Navbar= ({logo, companyName}) => {
-	const [isOpen, handleIsOpen] = useIsOpen(false)
+export const Navbar= ({companyLogo, companyName}) => {
+	const [isOpen, handleIsOpen]	= useIsOpen(false)
 	const NavbarMain = ({children}) => (	
-		<nav className="relative flex block flex-wrap items-center justify-between px-4 py-3 bg-green-700">
+		<nav className="relative flex flex-wrap items-center justify-between block px-4 py-3 bg-green-700">
 			{children}
 		</nav>
 	)
 	const NavbarCompany = ({children}) => (
-		<div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
+		<div className="relative flex justify-between w-full lg:w-auto lg:static lg:block lg:justify-start">
 			{children}
 		</div>
 	)
 	return(
 		<NavbarMain>
 			<NavbarCompany>
-				<NavbarCompanyInfo logo={logo} companyName = {companyName}/>
+				<NavbarCompanyInfo companyLogo={companyLogo} companyName = {companyName}/>
 				<button
-					className="text-black cursor-pointer text-xl w-12 leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none transform hover:scale-125 duration-350 hover:opacity-60"
+					className="block w-12 px-3 py-1 text-xl leading-none text-black bg-transparent border border-transparent border-solid rounded outline-none cursor-pointer lg:hidden focus:outline-none"
 					type="button"
 					onClick={handleIsOpen}
 				>
@@ -35,9 +35,11 @@ export const Navbar= ({logo, companyName}) => {
 			</NavbarCompany>
 			<NavbarButtons 
 				isOpen={isOpen} 
-				loginLogo={loginLogo}
 			/>
 		</NavbarMain>
 	)
 }
-
+NavbarCompanyInfo.propTypes = {
+	companyLogo: PropTypes.string.isRequired,
+	companyName: PropTypes.string.isRequired,
+}
