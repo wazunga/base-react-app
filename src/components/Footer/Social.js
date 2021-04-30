@@ -7,7 +7,7 @@ import instagram from '../../assets/instagram.svg'
 
 export const Social = ({description}) => {	
 	const SocialMain = ({children}) => (	
-		<div className='lg:ml-20 lg:w-1/3 mb-3'>
+		<div className='mb-3 lg:ml-20 lg:w-1/3'>
 				{children}
 			</div>
 	)
