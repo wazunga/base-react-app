@@ -10,7 +10,7 @@ import { ModalCancel } from './ModalCancel'
 
 export const Modal = (props) => {
   return (
-    <ModalContainer>
+    <ModalContainer static open={props.isOpen}>
       <ModalInfo>
         <ModalIcon {...props} />
         <ModalDetail {...props} />
@@ -18,8 +18,8 @@ export const Modal = (props) => {
       <ModalButtons>
         <ModalAction {...props}>Aceptar</ModalAction>
         <ModalCancel {...props} />
-      </ModalButtons >
-    </ModalContainer >
+      </ModalButtons>
+    </ModalContainer>
   )
 }
 

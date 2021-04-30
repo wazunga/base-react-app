@@ -9,21 +9,22 @@ export const Test = () => {
   return (
     <>
       <div className="p-4">
-        <button 
-          onClick={handleIsOpen} 
-          className="text-white bg-blue-300 border-4 border-blue-600 button">
+        <button
+          onClick={handleIsOpen}
+          className="text-white bg-blue-300 border-4 border-blue-600 button"
+        >
           Open modal
         </button>
       </div>
-      {isOpen &&
-      <Modal 
-        onAction={handleIsOpen}
-        isOpen={isOpen}
-        onClose={handleIsOpen}
-        title="Title"
-        content="Content"
-      />
-      }
+      {isOpen && (
+        <Modal
+          onAction={handleIsOpen}
+          isOpen={isOpen}
+          onClose={handleIsOpen}
+          title="Title"
+          content="Content"
+        />
+      )}
     </>
   )
 }

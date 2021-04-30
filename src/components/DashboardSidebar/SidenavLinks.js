@@ -1,5 +1,5 @@
 import React from 'react'
-import PropTypes, {object} from 'prop-types'
+import PropTypes, { object } from 'prop-types'
 import { LinksDropdown } from './LinksDropdown'
 
 /** Componente que es parte de SidenavLinks, en donde se hace enlace

@@ -11,7 +11,7 @@ export const Avatar = () => {
 
   return (
     <div className="relative">
-      <button 
+      <button
         className="transition-opacity duration-200 rounded-full dark:opacity-75 dark:hover:opacity-100 focus:outline-none focus:ring dark:focus:opacity-100"
         onClick={handleIsMenuOpen}
       >
@@ -33,15 +33,24 @@ export const Avatar = () => {
         leaveTo="translate-y-1/2 opacity-0"
         className="absolute right-0 w-48 py-1 bg-white rounded-md shadow-lg top-12 ring-1 ring-black ring-opacity-5 dark:bg-dark focus:outline-none"
       >
-          <span role="menuitem" className="block px-4 py-2 text-sm text-gray-700 transition-colors hover:bg-gray-100 dark:text-light dark:hover:bg-blue-600">
-            Your Profile
-          </span>
-          <span role="menuitem" className="block px-4 py-2 text-sm text-gray-700 transition-colors hover:bg-gray-100 dark:text-light dark:hover:bg-blue-600">
-            Logout
-          </span>
-          <span role="menuitem" className="block px-4 py-2 text-sm text-gray-700 transition-colors hover:bg-gray-100 dark:text-light dark:hover:bg-blue-600">
-            Settings
-          </span>
+        <span
+          role="menuitem"
+          className="block px-4 py-2 text-sm text-gray-700 transition-colors hover:bg-gray-100 dark:text-light dark:hover:bg-blue-600"
+        >
+          Your Profile
+        </span>
+        <span
+          role="menuitem"
+          className="block px-4 py-2 text-sm text-gray-700 transition-colors hover:bg-gray-100 dark:text-light dark:hover:bg-blue-600"
+        >
+          Logout
+        </span>
+        <span
+          role="menuitem"
+          className="block px-4 py-2 text-sm text-gray-700 transition-colors hover:bg-gray-100 dark:text-light dark:hover:bg-blue-600"
+        >
+          Settings
+        </span>
       </Transition>
     </div>
   )

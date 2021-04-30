@@ -1,51 +1,49 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-export const ErrorDisplay = ({ img, title, message, background}) => {
-	const ErrorDisplayMain = ({children}) => (	
-		<div
-			className={` ${background} dark:bg-gray-800 flex items-center h-screen flex justify-center px-6 py-16`}			 
-		>
-			{children}
-		</div>
-	)
-	const ImgContainer = ({children}) => (
-		<div className="flex items-center justify-center w-full md:mt-0 md:w-1/2 md:order-2">
-			{children}
-		</div>
-	)
-	const ErrorDisplayContent = ({children}) => (
-		<div className="w-full md:w-1/2 md:order-1 mt-6 max-w-lg">
-			{children}
-		</div>
-	)
-	const ErrorDisplayButton = ({btnLabel}) => (	
-		<button className="px-3 py-2 mt-4 mr-2 text-sm font-medium text-white uppercase bg-indigo-600 rounded-md hover:bg-indigo-500 focus:outline-none focus:bg-indigo-500">
-			{btnLabel}
-		</button>
-	)
-	return (
-		<ErrorDisplayMain>
-			<ImgContainer>
-				<img alt="error-logo" className="w-full h-full max-w-2xl" src={img} />
-			</ImgContainer>
-			<ErrorDisplayContent>
-				<h1 className="text-2xl font-semibold text-gray-800 uppercase dark:text-white md:text-3xl">
-					{title}
-				</h1>
-				<p className="mt-2 text-gray-600 dark:text-gray-400">{message}</p>
-				<ErrorDisplayButton btnLabel='Retroceder'/>
-				<ErrorDisplayButton btnLabel='Inicio' />
-			</ErrorDisplayContent>
-		</ErrorDisplayMain>
-	)
+export const ErrorDisplay = ({ img, title, message, background }) => {
+  const ErrorDisplayMain = ({ children }) => (
+    <div
+      className={` ${background} dark:bg-gray-800 flex items-center h-screen flex justify-center px-6 py-16`}
+    >
+      {children}
+    </div>
+  )
+  const ImgContainer = ({ children }) => (
+    <div className="flex items-center justify-center w-full md:mt-0 md:w-1/2 md:order-2">
+      {children}
+    </div>
+  )
+  const ErrorDisplayContent = ({ children }) => (
+    <div className="w-full md:w-1/2 md:order-1 mt-6 max-w-lg">{children}</div>
+  )
+  const ErrorDisplayButton = ({ btnLabel }) => (
+    <button className="px-3 py-2 mt-4 mr-2 text-sm font-medium text-white uppercase bg-indigo-600 rounded-md hover:bg-indigo-500 focus:outline-none focus:bg-indigo-500">
+      {btnLabel}
+    </button>
+  )
+  return (
+    <ErrorDisplayMain>
+      <ImgContainer>
+        <img alt="error-logo" className="w-full h-full max-w-2xl" src={img} />
+      </ImgContainer>
+      <ErrorDisplayContent>
+        <h1 className="text-2xl font-semibold text-gray-800 uppercase dark:text-white md:text-3xl">
+          {title}
+        </h1>
+        <p className="mt-2 text-gray-600 dark:text-gray-400">{message}</p>
+        <ErrorDisplayButton btnLabel="Retroceder" />
+        <ErrorDisplayButton btnLabel="Inicio" />
+      </ErrorDisplayContent>
+    </ErrorDisplayMain>
+  )
 }
 ErrorDisplay.propTypes = {
-	img: PropTypes.string.isRequired,
-	title: PropTypes.string.isRequired,
-	message: PropTypes.string.isRequired,
-	background: PropTypes.string,
+  img: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  message: PropTypes.string.isRequired,
+  background: PropTypes.string
 }
 ErrorDisplay.defaultProps = {
-	background: 'bg-white'
+  background: 'bg-white'
 }
