@@ -6,6 +6,7 @@ import { DashboardSidebar } from '../../components/DashboardSidebar'
 import { DashboardContainer } from './DashboardContainer'
 import { DashboardContent } from './DashboardContent'
 import { DashboardMainContent } from './DashboarMainContent'
+import { Test } from './DashboardPages/Test'
 
 const Section = ({ title }) => (
   <div className="bg-gray-50">
@@ -27,6 +28,7 @@ export const Dashboard = () => (
           <Section title="Dashboard Home" path="/" />
           <Section title="Link 1" path="link1" />
           <Section title="Link 2" path="link2" />
+          <Test path="test" />
           <Section title="Not found" default />
         </Router>
       </DashboardMainContent>
