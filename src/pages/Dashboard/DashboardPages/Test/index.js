@@ -7,12 +7,14 @@ export const Test = () => {
   console.log(isOpen)
 
   return (
-    <div className="flex items-center justify-center h-full p-4">
-      <button 
-        onClick={handleIsOpen} 
-        className="text-white bg-blue-300 border-4 border-blue-600 button">
-        Open modal
-      </button>
+    <>
+      <div className="p-4">
+        <button 
+          onClick={handleIsOpen} 
+          className="text-white bg-blue-300 border-4 border-blue-600 button">
+          Open modal
+        </button>
+      </div>
       {isOpen &&
       <Modal 
         onAction={handleIsOpen}
@@ -22,6 +24,6 @@ export const Test = () => {
         content="Content"
       />
       }
-    </div>
+    </>
   )
 }
