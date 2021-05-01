@@ -31,8 +31,8 @@ export const ErrorDisplay = ({ img, title, message, background}) => {
 				</h1>
 				<p className="mt-2 text-gray-600 dark:text-gray-400">{message}</p>
 				<div className='mt-5 flex'>
-					<ErrorDisplayButton btnLabel='Retroceder'/>
-					<ErrorDisplayButton btnLabel='Inicio' />
+					<ErrorDisplayButton btnLabel='Retroceder' to='/'/>
+					<ErrorDisplayButton btnLabel='Inicio' to='/'/>
 				</div>
 				</ErrorDisplayContent>
 		</ErrorDisplayMain>
