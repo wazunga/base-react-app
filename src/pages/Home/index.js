@@ -43,12 +43,20 @@ export const Home = () => {
 	return(
 		<HomeContainer>
 			<Navbar
-				{...infoCompanyData}
+				companyName={infoCompanyData.companyName}
+				companyLogo={infoCompanyData.companyLogo}
 			/>
 			<ContentHome/>
 			<Footer 
 				className='bg-red-300'
-				{...infoCompanyData}
+				companyInfo={infoCompanyData.companyInfo}
+				companyName={infoCompanyData.companyName}
+				companyLogo={infoCompanyData.companyLogo}
+				phone={infoCompanyData.phone}
+				email={infoCompanyData.email}
+				address={infoCompanyData.address}
+				descriptionContact={infoCompanyData.descriptionContact}
+				SocialNetworkListData={infoCompanyData.SocialNetworkListData}
 			/>
 		</HomeContainer>
 	)
