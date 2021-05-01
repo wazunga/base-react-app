@@ -16,7 +16,7 @@ export const ErrorDisplay = ({ img, title, message, background}) => {
 		</div>
 	)
 	const ErrorDisplayContent = ({children}) => (
-		<div className="w-full md:w-1/2 md:order-1 mt-6 max-w-lg">
+		<div className="w-full max-w-lg mt-6 md:w-1/2 md:order-1">
 			{children}
 		</div>
 	)
@@ -30,7 +30,7 @@ export const ErrorDisplay = ({ img, title, message, background}) => {
 					{title}
 				</h1>
 				<p className="mt-2 text-gray-600 dark:text-gray-400">{message}</p>
-				<div className='mt-5 flex'>
+				<div className='flex mt-5'>
 					<ErrorDisplayButton btnLabel='Retroceder' to='/'/>
 					<ErrorDisplayButton btnLabel='Inicio' to='/'/>
 				</div>
