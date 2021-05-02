@@ -33,9 +33,8 @@ export const LinksDropdown = ({ title, path, links }) => {
           */}
           {links.map((link, index) => (
             <Link
-              id={index}
+              key={index}
               to={link.path}
-              role="menuitem"
               className="block p-2 text-sm text-gray-500 transition-colors duration-200 rounded-md dark:text-light dark:hover:text-light hover:text-gray-700"
             >
               {link.title}
