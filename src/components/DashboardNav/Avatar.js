@@ -10,7 +10,7 @@ export const Avatar = () => {
   const [isMenuOpen, handleIsMenuOpen] = useIsOpen(false)
 
   return (
-    <div className="relative">
+    <div className="relative ml-auto">
       <button
         className="rounded-full transition-opacity duration-200 dark:opacity-75 dark:hover:opacity-100 focus:outline-none focus:ring dark:focus:opacity-100"
         onClick={handleIsMenuOpen}

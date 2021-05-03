@@ -4,7 +4,7 @@ import { Avatar } from './Avatar'
 
 export const SubMenu = () => {
   const Button = ({ Icon, sr }) => (
-    <button className="p-2 text-blue-400 transition-colors duration-200 rounded-full bg-blue-50 hover:text-blue-600 hover:bg-blue-100 dark:hover:text-light dark:hover:bg-blue-700 dark:bg-dark focus:outline-none focus:bg-blue-100 dark:focus:bg-blue-700 focus:ring-blue-800">
+    <button className="p-2 text-blue-400 rounded-full transition-colors duration-200 bg-blue-50 hover:text-blue-600 hover:bg-blue-100 dark:hover:text-light dark:hover:bg-blue-700 dark:bg-dark focus:outline-none focus:bg-blue-100 dark:focus:bg-blue-700 focus:ring-blue-800">
       <span className="sr-only">{sr}</span>
       <Icon className="w-7 h-7" />
     </button>
