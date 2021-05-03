@@ -8,7 +8,7 @@ import {useIsOpen} from '../../hooks/useIsOpen'
 export const Navbar = (props) => {
 	const [isOpen, handleIsOpen]	= useIsOpen(false)
 	const NavbarMain = ({children}) => (	
-		<nav className="relative flex flex-wrap items-center justify-between block px-4 py-3 bg-green-700">
+		<nav className="fixed flex flex-wrap items-center justify-between block w-screen px-4 py-3 bg-green-700">
 			{children}
 		</nav>
 	)

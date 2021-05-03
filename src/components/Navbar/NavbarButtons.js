@@ -18,14 +18,18 @@ export const NavbarButtons = ({isOpen}) => {
 	return(
 		<ButtonsContainer>
 			<ul className="flex flex-col list-none lg:flex-row lg:ml-auto">
-				<li className="nav-item">
-					<NavbarButton  
-						IconButton={LoginIcon}
-						altLogo='login-logo'
-						textButton='Registrarse'
-						titleButton='registarse'
-					/>	
-				</li>
+				<NavbarButton  
+					IconButton={LoginIcon}
+					altLogo='login-logo'
+					textButton='Registrarse'
+					titleButton='registarse'
+				/>	
+				<NavbarButton  
+					IconButton={LoginIcon}
+					altLogo='login-logo'
+					textButton='Registrarse'
+					titleButton='registarse'
+				/>	
 			</ul>
 		</ButtonsContainer>
 	)
