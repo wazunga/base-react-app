@@ -5,7 +5,6 @@ import { DashboardSectionTitle } from '../../DashboardSectionTitle'
 import { DashboardSectionContent } from '../../DashboardSectionContent'
 
 export const Users = () => {
-
   const Section = ({ title }) => (
     <div className="h-full bg-gray-50">
       <h1 className="text-2xl">{title}</h1>
@@ -17,14 +16,13 @@ export const Users = () => {
       <DashboardSectionTitle title="Usuarios" />
       <DashboardSectionContent>
         <Router>
-          <Section path="/" title="Ver"/>
-          <Section path="edit" title="Update"/>
-          <Section path="create" title="Create"/>
-          <Section path="delete" title="Delete"/>
-          <Section default title="Not found"/>
+          <Section path="/" title="Ver" />
+          <Section path="edit" title="Update" />
+          <Section path="create" title="Create" />
+          <Section path="delete" title="Delete" />
+          <Section default title="Not found" />
         </Router>
       </DashboardSectionContent>
     </DashboardSection>
   )
 }
-
