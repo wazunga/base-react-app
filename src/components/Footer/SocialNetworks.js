@@ -1,8 +1,8 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import { Link } from '@reach/router'
 
 export const SocialNetworks = ({href, img, alt}) => (
-	<Fragment>	
+	<>	
 			<Link
 				to={href}
 				className="transition transform hover:scale-125 duration-350 hover:opacity-60 focus:outline-none"
@@ -13,5 +13,5 @@ export const SocialNetworks = ({href, img, alt}) => (
 					alt={alt}
 				/>
       </Link>
-	</Fragment>
+	</>
 )

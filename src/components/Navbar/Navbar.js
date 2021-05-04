@@ -2,7 +2,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import {NavbarCompanyInfo} from './NavbarCompanyInfo'
 import {NavbarButtons} from './NavbarButtons'
-import menu from '../../assets/menu.svg'
 import {useIsOpen} from '../../hooks/useIsOpen'
 import { MenuIcon, XIcon } from '@heroicons/react/outline'
 

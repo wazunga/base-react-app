@@ -1,8 +1,8 @@
-import React, {Fragment} from 'react'
+import React from 'react'
 import {SocialNetworks} from './SocialNetworks'
 
 export const SocialNetworkList = ({SocialNetworkListData}) => (
-	<Fragment>
+	<>
 		{
 			SocialNetworkListData.map((socialNetwork, id) => (
 				<SocialNetworks
@@ -13,6 +13,6 @@ export const SocialNetworkList = ({SocialNetworkListData}) => (
 				/>	
 			))
 		}
-	</Fragment>
+	</>
 )
 

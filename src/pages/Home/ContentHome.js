@@ -2,7 +2,7 @@ import React from 'react'
 
 export const ContentHome = () => {
 	const ContentParrafo = ({children}) => (
-		<div className='w-full pt-16 text-justify md:px-24 lg:px-8 mt-10'>
+		<div className='w-full pt-16 mt-10 text-justify md:px-24 lg:px-8'>
 			{children}
 		</div>
 	)
