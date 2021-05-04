@@ -39,11 +39,11 @@ export const ErrorDisplay = ({ img, title, message, background}) => {
 	)
 }
 ErrorDisplay.propTypes = {
-	img: PropTypes.string.isRequired,
-	title: PropTypes.string.isRequired,
-	message: PropTypes.string.isRequired,
-	background: PropTypes.string,
+  img: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  message: PropTypes.string.isRequired,
+  background: PropTypes.string
 }
 ErrorDisplay.defaultProps = {
-	background: 'bg-white'
+  background: 'bg-white'
 }

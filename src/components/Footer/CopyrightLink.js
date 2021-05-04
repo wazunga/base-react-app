@@ -13,6 +13,6 @@ export const CopyrightLink = ({ text, href }) => (
   </>
 )
 CopyrightLink.propTypes = {
-	text: PropTypes.string.isRequired,
-	href: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired,
+  href: PropTypes.string.isRequired
 }

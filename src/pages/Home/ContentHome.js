@@ -160,5 +160,3 @@ export const ContentHome = () => {
 		</ContentHomeMain>
 	)
 }
-
-

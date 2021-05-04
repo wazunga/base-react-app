@@ -9,7 +9,7 @@ export const useDropdown = () => {
     if (isOpen) {
       setIsOpen(false)
       setOpenClasses('')
-    } else if(!isOpen) {
+    } else if (!isOpen) {
       setIsOpen(true)
       setOpenClasses('bg-blue-100 dark:bg-blue-600')
     }

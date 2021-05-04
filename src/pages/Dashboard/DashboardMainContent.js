@@ -1,5 +1,5 @@
 import React from 'react'
 
 export const DashboardMainContent = ({ children }) => (
-  <main class="m-4 h-full">{children}</main>
+  <main className="h-full m-3">{children}</main>
 )

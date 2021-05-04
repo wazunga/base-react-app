@@ -4,8 +4,8 @@ import { useState } from 'react'
  * classes when the elemen is inactive, so then default the second position
  * must be the active classes
  * @param {Array} InitialValues
- * @returns {string} classes 
-*/
+ * @returns {string} classes
+ */
 export const useIsActiveClasses = (initialValues) => {
   const [classesArray, setClassesArray] = useState(initialValues)
 
@@ -13,8 +13,8 @@ export const useIsActiveClasses = (initialValues) => {
    * that are you needed to handle your UI behaviour
    * @param {boolean} isOpen
    * @returns {string}
-  */
-  const classes = (isOpen) => !isOpen ? classesArray[0] : classesArray[1]
+   */
+  const classes = (isOpen) => (!isOpen ? classesArray[0] : classesArray[1])
 
   const handelUpdateClassesArray = (e, value, index) => {
     e.preventDefault()
