@@ -4,6 +4,7 @@ import {NavbarCompanyInfo} from './NavbarCompanyInfo'
 import {NavbarButtons} from './NavbarButtons'
 import menu from '../../assets/menu.svg'
 import {useIsOpen} from '../../hooks/useIsOpen'
+import { MenuIcon, XIcon } from '@heroicons/react/outline'
 
 export const Navbar = (props) => {
 	const [isOpen, handleIsOpen]	= useIsOpen(false)
@@ -22,15 +23,21 @@ export const Navbar = (props) => {
 			<NavbarCompany>
 				<NavbarCompanyInfo {...props}/>
 				<button
-					className="block w-12 px-3 py-1 text-xl leading-none text-black bg-transparent border border-transparent border-solid rounded outline-none cursor-pointer lg:hidden focus:outline-none"
+					className="block w-12 px-3 py-1 text-xl leading-none text-black bg-transparent border border-transparent border-solid rounded outline-none cursor-pointer hover:opacity-50 lg:hidden focus:outline-none"
 					type="button"
 					onClick={handleIsOpen}
 				>
-					<img
-						src={menu}
+					{
+						isOpen? 
+					<XIcon
 						alt='menu'
 						className='w-8'
-					/>
+					/> :
+					<MenuIcon
+						alt='menu'
+						className='w-8'
+					/> 
+					}
 				</button>
 			</NavbarCompany>
 			<NavbarButtons 
