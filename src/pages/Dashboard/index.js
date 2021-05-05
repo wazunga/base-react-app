@@ -8,6 +8,7 @@ import { DashboardContent } from './DashboardContent'
 import { DashboardMainContent } from './DashboardMainContent'
 import { Test } from './DashboardPages/Test'
 import { Users } from './DashboardPages/Users'
+import { Home } from './DashboardPages/Home'
 
 const Section = ({ title }) => (
   <div className="bg-gray-50">
@@ -26,7 +27,7 @@ export const Dashboard = () => (
       <DashboardNav />
       <DashboardMainContent>
         <Router className="h-full">
-          <Section title="Dashboard Home" path="/" />
+          <Home path="/" />
           <Users path="users/*" />
           <Test path="test" />
           <Section title="Not found" default />
