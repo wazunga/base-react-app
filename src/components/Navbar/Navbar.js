@@ -22,7 +22,7 @@ export const Navbar = (props) => {
 			<NavbarCompany>
 				<NavbarCompanyInfo {...props}/>
 				<button
-					className="block w-12 px-3 py-1 text-xl leading-none text-black bg-transparent border border-transparent border-solid rounded outline-none cursor-pointer hover:opacity-50 lg:hidden focus:outline-none"
+					className="block w-12 px-3 py-1 mr-3 text-xl leading-none text-black bg-transparent border border-transparent border-solid rounded outline-none cursor-pointer hover:opacity-50 lg:hidden focus:outline-none"
 					type="button"
 					onClick={handleIsOpen}
 				>

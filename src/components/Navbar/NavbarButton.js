@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 export const NavbarButton = ({IconButton, altLogo, titleButton, textButton}) => (	
 	<li className="nav-item">
 		<Link
-			className="flex items-center px-3 py-2 text-xs font-bold leading-snug text-black uppercase hover:opacity-60 transition ease-in-out duration-350 transform hover:scale-110 focus:outline-none"
+			className="flex items-center px-3 py-2 text-xs font-bold leading-snug text-black uppercase hover:scale-110 hover:opacity-60 transition ease-in-out duration-350 transform focus:outline-none"
 			to="/"
 
 			title={titleButton?titleButton:''}

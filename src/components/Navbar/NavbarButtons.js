@@ -1,19 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Transition } from '@headlessui/react'
 import {NavbarButton} from './NavbarButton'
 import { LoginIcon } from '@heroicons/react/outline'
 
 export const NavbarButtons = ({isOpen}) => {
 	const ButtonsContainer = ({children}) => (	
-		<Transition
-			show={isOpen}
-			enter='transition-opacity duration-300'
-			enterFrom='opacity-0'
-			enterTo='opacity-100'
-			leave='transition-opacity duration-300'
-			leaveFrom='opacity-100'
-			leaveTo='opacity-0'
+		<div
 			className={
 					"transition-all duration-400  lg:flex flex-grow items-center " +
 					(isOpen ? " flex" : " hidden")
@@ -21,7 +13,7 @@ export const NavbarButtons = ({isOpen}) => {
 				id="example-navbar-danger"
 		>
 			{children}
-		</Transition>
+		</div>
 	)
 	return(
 		<ButtonsContainer>
