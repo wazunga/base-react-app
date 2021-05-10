@@ -1,52 +1,61 @@
 import React from 'react'
-import { LabelLogin } from '../../components/login/LabelLogin'
-import { InputsLogin } from '../../components/login/InputsLogin'
-import { ButonLogin } from '../../components/login/ButonLogin'
-
+import {Formik} from 'formik'
+import { LabelLogin } from '../../components/Login/LabelLogin'
+import { InputsLogin } from '../../components/Login/InputsLogin'
+import { ButonLogin } from '../../components/Login/ButonLogin'
+import * as Yup from 'yup'
 
 
 export const Login = () => {
 
   //////////beging Data Props///////
-
-  const DataTitulos ={
+	const DataTitulos ={
     valor1: 'AWESOME TOOL FOR YOUR FUTURE TEAM',
     valor2: 'Develop your workforce and make it a selling machine'
-  }
-  
-    //////////end Data Props/////// 
+  }  
+  //////////end Data Props/////// 
 
 
-   const ContainerFormlogin = ({ children }) => (
-    <div className="mx-auto max-w-6xl p-12 h-screen flex items-center justify-center">{children}</div>
-  )
-
-   const ContainerLabelLogin = ({ children }) => (
-    <div className="flex flex-col md:flex-row justify-center bg-gray-200 px-8 py-8">{children}</div>
-    )
-
-
-    const ContainerInputs = ({ children }) =>(
-      <div className="md:w-1/2 flex mt-5 md:justify-end w-full mx-auto">{ children }</div>
-    )
-
-    const ContainerInputs2 = ({ children }) =>(
-      <div class="shadow-md flex-auto max-w-sm p-10 pb-20">{ children }</div>
-    )
-
-return(
-  <ContainerFormlogin>
-    <ContainerLabelLogin>
-      <LabelLogin {...DataTitulos} />
-      <ContainerInputs>
-        <ContainerInputs2>
-          <InputsLogin />
-          <ButonLogin ButonNameLogin = "Iniciar Sesion"/>
-        </ContainerInputs2>
-      </ContainerInputs>
-    </ContainerLabelLogin>
-  </ContainerFormlogin>
-)
- 
+	const ContainerFormlogin = ({ children }) => (
+		<div className="flex items-center justify-center h-screen max-w-6xl p-12 mx-auto">{children}</div>
+	)
+	 const ContainerLabelLogin = ({ children }) => (
+		<div className="flex flex-col justify-center px-8 py-8 bg-gray-200 md:flex-row">{children}</div>
+	)
+		const ContainerInputs = ({ children }) =>(
+			<Formik 
+				initialValues={{
+					username:'',
+					password:''
+				}}
+				validationSchema={Yup.object({
+					username: Yup.string()
+						.max(25, 'Caracteres maximos 25')
+						.min(5, 'Caracteres minimos 5')
+						.required('Required'),
+					password: Yup.string()
+						.max(30, 'Caracteres maximos 25')
+						.min(8, 'Caracteres minimos 8')
+						.required('Required')
+				})}
+				className="flex w-full mx-auto mt-5 md:w-1/2 md:justify-end">{ children }
+			</Formik>
+	)
+		const ContainerInputs2 = ({ children }) =>(
+			<div class="shadow-md flex-auto max-w-sm p-10 pb-20">{ children }</div>
+	)
+	return(
+		<ContainerFormlogin>
+			<ContainerLabelLogin>
+				<LabelLogin {...DataTitulos} />
+				<ContainerInputs>
+					<ContainerInputs2>
+						<InputsLogin />
+						<ButonLogin ButonNameLogin = "Iniciar Sesion"/>
+					</ContainerInputs2>
+				</ContainerInputs>
+			</ContainerLabelLogin>
+		</ContainerFormlogin>
+	) 
 }
 
