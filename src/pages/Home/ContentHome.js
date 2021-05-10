@@ -5,7 +5,7 @@ export const ContentHome = () => {
     <div className="w-full pt-16 md:px-24 lg:px-8 text-justify">{children}</div>
   )
   const ContentHomeMain = ({ children }) => (
-    <div className="flex flex-col justify-between lg:flex-row px-10">
+    <div className="flex flex-col justify-between lg:flex-row px-10 mb-auto">
       {children}
     </div>
   )

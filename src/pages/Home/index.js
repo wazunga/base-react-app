@@ -16,7 +16,7 @@ export const Home = () => {
     description:
       'Bibendum orci leo blandit lacus. In id velit sodales arcu iaculis venenatis. Etiam at leo. Vivamus vitae sem. Mauris volutpat congue risus.'
   }
-  const HomeContainer = ({ children }) => <div>{children}</div>
+  const HomeContainer = ({ children }) => <div className="flex flex-col h-screen justify-between">{children}</div>
   return (
     <HomeContainer>
       <Navbar {...infoCompanyData} />
