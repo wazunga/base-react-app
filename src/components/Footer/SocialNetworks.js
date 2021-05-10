@@ -5,7 +5,7 @@ export const SocialNetworks = ({href, img, alt}) => (
 	<>	
 			<Link
 				to={href}
-				className="transition transform hover:scale-125 duration-350 hover:opacity-60 focus:outline-none"
+				className="z-0 transition transform hover:scale-125 duration-350 hover:opacity-60 focus:outline-none"
 			>
 				<img
 					className='w-6 rounded-full'
