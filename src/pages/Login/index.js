@@ -14,7 +14,7 @@ export const Login = () => {
     valor2: 'Develop your workforce and make it a selling machine'
   }
   
-    //////////end Data Props///////
+    //////////end Data Props/////// 
 
 
    const ContainerFormlogin = ({ children }) => (
