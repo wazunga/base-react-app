@@ -2,7 +2,7 @@ import React from 'react'
 import { Router } from '@reach/router'
 import { Dashboard } from './pages/Dashboard'
 import { Home } from './pages/Home'
-import Login from './pages/Login'
+import { Login } from './pages/Login'
 import SiteStatus from './pages/SiteStatus'
 
 const App = () => (
