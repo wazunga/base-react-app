@@ -1,9 +1,13 @@
 import React from 'react'
+import { ImageSection } from './ImageSection'
+import { LoginContainer } from './LoginPageContainer'
+import { LoginSection } from './LoginSection'
 
 const Login = () => (
-  <div>
-    <h1>Login</h1>
-  </div>
+  <LoginContainer>
+    <LoginSection />
+    <ImageSection />
+  </LoginContainer>
 )
 
 export default Login
