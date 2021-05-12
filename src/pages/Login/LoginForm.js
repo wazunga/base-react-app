@@ -45,7 +45,7 @@ export const LoginForm = () => (
 					name='password'
 				/>
 
-				<button type="submit" className="focus:outline-none  w-1/2 p-2 mx-auto mt-5 text-lg font-bold text-white bg-black border-black rounded-lg md:w-5/12 sm:w-2/5 lg:w-1/3 hover:opacity-90 transform hover:scale-105">
+				<button type="submit" className="w-1/2 p-2 mx-auto mt-5 text-lg font-bold text-white bg-black border-black rounded-lg focus:outline-none md:w-5/12 sm:w-2/5 lg:w-1/3 hover:opacity-90 transform hover:scale-105">
 					Iniciar Sesión	
 				</button>
 			</Form>
