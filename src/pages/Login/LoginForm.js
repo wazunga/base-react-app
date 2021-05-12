@@ -1,26 +1,57 @@
 import React from 'react'
-
+import {Form, Formik} from 'formik'
+import {Inputs} from '../../components/Login/Inputs'
+import * as Yup from 'yup'
 // TODO: Implementar Formik components
 // TODO: Sustituir paleta de colores, utilizar dashboard
 
 export const LoginForm = () => (
-  <div className="flex flex-col justify-center md:justify-start my-auto pt-8 md:pt-0 px-8 md:px-24 lg:px-32">
-    <p className="text-center text-3xl">Welcome.</p>
-    <form className="flex flex-col pt-3 md:pt-8" onsubmit="event.preventDefault();">
-      <div className="flex flex-col pt-4">
-        <label for="email" className="text-lg">Email</label>
-        <input type="email" id="email" placeholder="your@email.com" className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mt-1 leading-tight focus:outline-none focus:shadow-outline" />
-      </div>
+  <Formik 	
+		initialValues={{
+			email:'',
+			password:''
+		}}
+		validationSchema={Yup.object({
+			email: Yup.string()
+				.max(25, 'Caracteres maximos 25')
+				.min(5, 'Caracteres minimos 5')
+				.email('Invalid email address')
+				.required('Required'),
+			password: Yup.string()
+				.max(30, 'Caracteres maximos 25')
+				.min(8, 'Caracteres minimos 8')
+				.required('Required')
+		})}
+		 onSubmit={(values, { setSubmitting }) => {
+         setTimeout(() => {
+           alert(JSON.stringify(values, null, 2));
+           setSubmitting(false);
+         }, 400);
+       }}
+		className="flex flex-col justify-center min-h-screen px-8 pt-8 my-auto md:justify-start md:pt-0 md:px-24 lg:px-32"
+	>
+		<>
+			<Form className="flex flex-col pt-3 md:pt-2">
+				<Inputs
+					label='Email'
+					value='Email'
+					FieldType='email'
+					name='email'
+				/>
+				<Inputs
+					label='Password'
+					value='Password'
+					FieldType='password'
+					name='password'
+				/>
 
-      <div className="flex flex-col pt-4">
-        <label for="password" className="text-lg">Password</label>
-        <input type="password" id="password" placeholder="Password" className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mt-1 leading-tight focus:outline-none focus:shadow-outline" />
-      </div>
-
-      <input type="submit" value="Log In" className="bg-black text-white font-bold text-lg hover:bg-gray-700 p-2 mt-8" />
-    </form>
-    <div className="text-center pt-12 pb-12">
-      <p>Password missing? <span className="underline font-semibold">Contact us.</span></p>
-    </div>
-  </div>
+				<button type="submit" className="focus:outline-none  w-1/2 p-2 mx-auto mt-5 text-lg font-bold text-white bg-black border-black rounded-lg md:w-5/12 sm:w-2/5 lg:w-1/3 hover:opacity-90 transform hover:scale-105">
+					Iniciar Sesión	
+				</button>
+			</Form>
+			<div className="pt-12 pb-12 text-center">
+				<p>Password missing? <span className="font-semibold underline">Contact us.</span></p>
+			</div>
+		</>
+  </Formik>
 )
