@@ -1,11 +1,16 @@
 import React from 'react'
-import {Formik} from 'formik'
-import { LabelLogin } from '../../components/Login/LabelLogin'
-import { InputsLogin } from '../../components/Login/InputsLogin'
-import { ButonLogin } from '../../components/Login/ButonLogin'
-import * as Yup from 'yup'
+import { ImageSection } from './ImageSection'
+import { LoginContainer } from './LoginPageContainer'
+import { LoginSection } from './LoginSection'
 
+export const Login = () => (
+  <LoginContainer>
+    <LoginSection />
+    <ImageSection />
+  </LoginContainer>
+)
 
+/*
 export const Login = () => {
 
   //////////beging Data Props///////
@@ -58,4 +63,4 @@ export const Login = () => {
 		</ContainerFormlogin>
 	) 
 }
-
+*/
