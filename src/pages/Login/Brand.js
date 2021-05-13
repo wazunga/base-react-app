@@ -1,7 +1,8 @@
 import React from 'react'
 
 export const Brand = () => (
-  <div className="flex justify-center md:justify-start pt-12 md:pl-12 md:-mb-24">
-    <span className="bg-black text-white font-bold text-xl p-4">Logo</span>
+  <div className="flex flex-col justify-center min-w-full md:justify-start">
+    <p className="p-4 mx-auto my-5 text-xl font-bold text-white bg-black ">Logo</p>
+		<p className="w-full mx-auto text-3xl text-center">Welcome.</p>
   </div>
 )

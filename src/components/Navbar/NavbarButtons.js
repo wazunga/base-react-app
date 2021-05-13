@@ -1,28 +1,40 @@
 import React from 'react'
-import { Link } from '@reach/router'
 import PropTypes from 'prop-types'
+import {NavbarButton} from './NavbarButton'
+import { LoginIcon } from '@heroicons/react/outline'
 
-export const NavbarButtons = ({ navbarOpen, LoginIcon }) => (
-  <div
-    className={
-      'lg:flex flex-grow items-center ' + (navbarOpen ? ' flex' : ' hidden')
-    }
-    id="example-navbar-danger"
-  >
-    <ul className="flex flex-col list-none lg:flex-row lg:ml-auto">
-      <li className="nav-item">
-        <Link
-          className="flex items-center px-3 py-2 text-xs font-bold leading-snug text-white uppercase hover:opacity-75"
-          to="/"
-        >
-          <LoginIcon className="w-5" alt="login-logo" />{' '}
-          <span className="ml-2">Registrarse</span>
-        </Link>
-      </li>
-    </ul>
-  </div>
-)
+export const NavbarButtons = ({isOpen}) => {
+	const ButtonsContainer = ({children}) => (	
+		<div
+			className={
+					"transition-all duration-400  lg:flex flex-grow items-center " +
+					(isOpen ? " flex" : " hidden")
+				}
+				id="example-navbar-danger"
+		>
+			{children}
+		</div>
+	)
+	return(
+		<ButtonsContainer>
+			<ul className="flex flex-col list-none lg:flex-row lg:ml-auto">
+				<NavbarButton  
+					IconButton={LoginIcon}
+					altLogo='login-logo'
+					textButton='Registrarse'
+					titleButton='registarse'
+				/>	
+				<NavbarButton  
+					IconButton={LoginIcon}
+					altLogo='login-logo'
+					textButton='Registrarse'
+					titleButton='registarse'
+				/>	
+			</ul>
+		</ButtonsContainer>
+	)
+}
+
 NavbarButtons.propTypes = {
-  navbarOpen: PropTypes.bool.isRequired,
-  login: PropTypes.string.isRequired
+	isOpen: PropTypes.bool.isRequired,
 }

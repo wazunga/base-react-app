@@ -1,7 +1,7 @@
 import React from 'react'
 
 export const LoginContainer = ({ children }) => (
-  <div className="w-full flex flex-wrap">
+  <div className="flex flex-wrap items-center w-full min-h-screen">
     {children}
   </div>
 )
