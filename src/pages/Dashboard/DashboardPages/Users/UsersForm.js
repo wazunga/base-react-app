@@ -1,6 +1,6 @@
 import React from 'react'
 import { Form, Formik } from 'formik'
-import { Inputs } from '../../components/Login/Inputs'
+import { Inputs } from '../../../../components/Login/Inputs'
 import * as Yup from 'yup'
 
 export const UsersForm = () => (
@@ -11,14 +11,14 @@ export const UsersForm = () => (
     }}
     validationSchema={Yup.object({
       email: Yup.string()
-        .max(25, 'Caracteres maximos 25')
-        .min(5, 'Caracteres minimos 5')
-        .email('Invalid email address')
-        .required('Required'),
+      .max(25, 'Caracteres maximos 25')
+      .min(5, 'Caracteres minimos 5')
+      .email('Invalid email address')
+      .required('Required'),
       password: Yup.string()
-        .max(30, 'Caracteres maximos 25')
-        .min(8, 'Caracteres minimos 8')
-        .required('Required')
+      .max(30, 'Caracteres maximos 25')
+      .min(8, 'Caracteres minimos 8')
+      .required('Required')
     })}
     onSubmit={(values, { setSubmitting }) => {
       setTimeout(() => {
@@ -38,12 +38,27 @@ export const UsersForm = () => (
           name="password"
         />
 
-        <button
-          type="submit"
-          className="w-1/2 p-2 mx-auto mt-5 text-lg font-bold text-white bg-black border-black rounded-lg focus:outline-none md:w-5/12 sm:w-2/5 lg:w-1/3 hover:opacity-90 transform hover:scale-105"
-        >
-          Iniciar Sesión
-        </button>
+        <div className="w-full">
+          <div className="flex flex-col items-center justify-center w-1/2 mx-auto lg:flex-row">
+            <div className="flex items-center justify-center w-full lg:w-1/2">
+              <button
+                type="submit"
+                className="w-5/6 p-2 mx-auto mt-5 text-base font-bold text-white bg-black border-black rounded-lg md:text-lg focus:outline-none lg:w-3/4 hover:opacity-90 transform hover:scale-105"
+              >
+                Cancelar
+              </button>
+            </div>
+            <div className="flex items-center justify-center w-full lg:w-1/2">
+              <button
+                type="submit"
+                className="w-5/6 p-2 mx-auto mt-5 text-base font-bold text-white bg-black border-black rounded-lg md:text-lg focus:outline-none lg:w-3/4 hover:opacity-90 transform hover:scale-105"
+              >
+                Iniciar Sesión
+              </button>
+            </div>
+          </div>
+        </div>
+
       </Form>
       <div className="pt-12 pb-12 text-center">
         <p>
