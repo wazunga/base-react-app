@@ -2,10 +2,8 @@ import React from 'react'
 import { Form, Formik } from 'formik'
 import { Inputs } from '../../components/Login/Inputs'
 import * as Yup from 'yup'
-// TODO: Implementar Formik components
-// TODO: Sustituir paleta de colores, utilizar dashboard
 
-export const LoginForm = () => (
+export const UsersForm = () => (
   <Formik
     initialValues={{
       email: '',

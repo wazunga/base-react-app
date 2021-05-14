@@ -1,5 +1,5 @@
 import React from 'react'
-import {CopyrightLink} from './CopyrightLink'
+import { CopyrightLink } from './CopyrightLink'
 
 export const Copyright = ({ companyName }) => {
   const CopyrightMain = ({ children }) => (
@@ -26,4 +26,3 @@ export const Copyright = ({ companyName }) => {
     </CopyrightMain>
   )
 }
-
