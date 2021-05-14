@@ -1,8 +1,8 @@
 import React from 'react'
 
 export const UsersHome = () => (
-  <div className="overflow-x-auto">
-    <div className="flex justify-center overflow-hidden font-sans bg-gray-100">
+  <div className="overflow-x-scroll">
+    <div className="flex justify-center font-sans bg-gray-100">
       <div className="w-full lg:w-5/6">
         <div className="my-6 bg-white rounded shadow-md">
           <table className="w-full table-auto min-w-max">
