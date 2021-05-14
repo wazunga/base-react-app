@@ -11,14 +11,14 @@ export const UsersForm = () => (
     }}
     validationSchema={Yup.object({
       email: Yup.string()
-      .max(25, 'Caracteres maximos 25')
-      .min(5, 'Caracteres minimos 5')
-      .email('Invalid email address')
-      .required('Required'),
+        .max(25, 'Caracteres maximos 25')
+        .min(5, 'Caracteres minimos 5')
+        .email('Invalid email address')
+        .required('Required'),
       password: Yup.string()
-      .max(30, 'Caracteres maximos 25')
-      .min(8, 'Caracteres minimos 8')
-      .required('Required')
+        .max(30, 'Caracteres maximos 25')
+        .min(8, 'Caracteres minimos 8')
+        .required('Required')
     })}
     onSubmit={(values, { setSubmitting }) => {
       setTimeout(() => {
@@ -58,7 +58,6 @@ export const UsersForm = () => (
             </div>
           </div>
         </div>
-
       </Form>
       <div className="pt-12 pb-12 text-center">
         <p>

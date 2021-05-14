@@ -4,7 +4,7 @@ import { DashboardSection } from '../../DashboardSection'
 import { DashboardSectionTitle } from '../../DashboardSectionTitle'
 import { DashboardSectionContent } from '../../DashboardSectionContent'
 import { UsersHome } from './UsersHome'
-import {UsersForm} from './UsersForm'
+import { UsersForm } from './UsersForm'
 
 export const Users = () => {
   const Section = ({ title }) => (
@@ -21,6 +21,7 @@ export const Users = () => {
           <UsersHome path="/" title="Ver" />
           <UsersForm path="create" />
           <Section path="edit" title="Update" />
+          <Section path="edit/1" title="Update with param" />
           <Section path="delete" title="Delete" />
           <Section default title="Not found" />
         </Router>
