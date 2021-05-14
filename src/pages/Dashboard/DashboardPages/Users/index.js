@@ -3,6 +3,7 @@ import { Router } from '@reach/router'
 import { DashboardSection } from '../../DashboardSection'
 import { DashboardSectionTitle } from '../../DashboardSectionTitle'
 import { DashboardSectionContent } from '../../DashboardSectionContent'
+import { UsersHome } from './UsersHome'
 
 export const Users = () => {
   const Section = ({ title }) => (
@@ -16,7 +17,7 @@ export const Users = () => {
       <DashboardSectionTitle title="Usuarios" />
       <DashboardSectionContent>
         <Router>
-          <Section path="/" title="Ver" />
+          <UsersHome path="/" title="Ver" />
           <Section path="edit" title="Update" />
           <Section path="create" title="Create" />
           <Section path="delete" title="Delete" />
