@@ -18,7 +18,11 @@ export const Users = () => {
       <DashboardSectionTitle title="Usuarios" />
       <DashboardSectionContent>
         <Router>
-          <UsersHome path="/" title="Ver" />
+          <UsersHome 
+            path="/" 
+            title="Ver" 
+            headers={['Nombre', 'Username', 'Status', 'Rol', 'Actions']} 
+          />
           <UsersForm path="create" />
           <Section path="edit" title="Update" />
           <Section path="edit/1" title="Update with param" />
