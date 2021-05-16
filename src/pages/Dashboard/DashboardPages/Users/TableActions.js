@@ -56,5 +56,4 @@ export const TableActions = ({ viewAction, editAction, deleteAction }) => (
       </div>
     </div>
   </td>
-
 )

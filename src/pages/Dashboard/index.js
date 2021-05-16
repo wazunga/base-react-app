@@ -26,7 +26,7 @@ export const Dashboard = () => (
     <DashboardContent>
       <DashboardNav />
       <DashboardMainContent>
-        <Router>
+        <Router className="h-full">
           <Home path="/" />
           <Users path="users/*" />
           <Test path="test" />

@@ -18,3 +18,10 @@ export const USERS_DATA = [
     user_status: 'Banned'
   }
 ]
+
+export const USERS_KEYS = [
+  'user_name',
+  'user_username',
+  'user_role',
+  'user_status'
+]
