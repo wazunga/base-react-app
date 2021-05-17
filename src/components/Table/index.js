@@ -1,19 +1,25 @@
 import React, { useState } from 'react'
+import ReactPaginate from 'react-paginate'
 import { TableBody } from './TableBody'
 import { TableHeaders } from './TableHeaders'
 import { TableActions } from './TableActions'
-import ReactPaginate from 'react-paginate'
+import { TableSearch } from './TableSearch'
+import { useTableSearch } from '../../hooks/useTableSearch'
 import './index.css'
 
 export const Table = ({ data, headers, keys, PER_PAGE = 5 }) => {
+  // paginator state
   const [currentPage, setCurrentPage] = useState(0)
+  // table search state
+  const [searchResult, search, handleSearchResult] = useTableSearch(data)
 
+  // Paginator handler
   const handlePageClick = ({ selected: selectedPage }) => {
     setCurrentPage(selectedPage)
   }
 
   const offset = currentPage * PER_PAGE
-  const currentPageData = data
+  const currentPageData = searchResult
     .slice(offset, offset + PER_PAGE)
     .map((row, key) => (
       <tr key={key} className="border-b border-gray-200 hover:bg-gray-100">
@@ -44,10 +50,15 @@ export const Table = ({ data, headers, keys, PER_PAGE = 5 }) => {
       </tr>
     ))
 
-  const pageCount = Math.ceil(data.length / PER_PAGE)
+  const pageCount = Math.ceil(searchResult.length / PER_PAGE)
 
   return (
     <>
+      <div className="flex items-center justify-content">
+        <div className="mx-auto">
+          <TableSearch value={search} onChange={handleSearchResult} />
+        </div>
+      </div>
       <div className="sm:overflow-x-scroll lg:overflow-x-hidden">
         <div className="flex justify-center font-sans bg-gray-100">
           <div className="w-full lg:w-5/6">
