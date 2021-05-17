@@ -18,7 +18,8 @@ export const Table = ({ data, headers, keys, PER_PAGE = 5 }) => {
     setCurrentPage(selectedPage)
   }
 
-  const offset = currentPage * PER_PAGE
+  // const offset = currentPage * PER_PAGE
+  const offset = search.length > 0 ? 0 :  currentPage * PER_PAGE
   const currentPageData = searchResult
     .slice(offset, offset + PER_PAGE)
     .map((row, key) => (
