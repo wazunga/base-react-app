@@ -3,7 +3,7 @@ import { TableBody } from './TableBody'
 import { TableHeaders } from './TableHeaders'
 import { TableActions } from './TableActions'
 import ReactPaginate from 'react-paginate'
-import '../../../../components/Paginator/Paginator.css'
+import './index.css'
 
 export const Table = ({ data, headers, keys, PER_PAGE = 5 }) => {
   const [currentPage, setCurrentPage] = useState(0)
@@ -54,9 +54,7 @@ export const Table = ({ data, headers, keys, PER_PAGE = 5 }) => {
             <div className="my-6 bg-white rounded shadow-md">
               <table className="w-full table-auto min-w-max">
                 <TableHeaders headers={headers} />
-                <TableBody>
-                  {currentPageData}
-                </TableBody>
+                <TableBody>{currentPageData}</TableBody>
               </table>
             </div>
           </div>
