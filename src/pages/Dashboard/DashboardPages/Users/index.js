@@ -7,6 +7,7 @@ import { UsersHome } from './UsersHome'
 import { UserNew } from './UserNew'
 import { UserEdit } from './UserEdit'
 import { UserDelete } from './UserDelete'
+import { UserDetail } from './UsersDetail'
 
 export const Users = () => {
   const Section = ({ title }) => (
@@ -28,6 +29,7 @@ export const Users = () => {
           <UserNew path="create" />
           <UserEdit path="edit/:id" />
           <UserDelete path="delete/:id" />
+          <UserDetail path="view/:id" />
           <Section default title="Not found" />
         </Router>
       </DashboardSectionContent>
