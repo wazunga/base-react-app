@@ -4,7 +4,9 @@ import { DashboardSection } from '../../DashboardSection'
 import { DashboardSectionTitle } from '../../DashboardSectionTitle'
 import { DashboardSectionContent } from '../../DashboardSectionContent'
 import { UsersHome } from './UsersHome'
-import { UsersForm } from './UsersForm'
+import { UserNew } from './UserNew'
+import { UserEdit } from './UserEdit'
+import { UserDelete } from './UserDelete'
 
 export const Users = () => {
   const Section = ({ title }) => (
@@ -23,10 +25,9 @@ export const Users = () => {
             title="Ver"
             headers={['Nombre', 'Username', 'Status', 'Rol', 'Actions']}
           />
-          <UsersForm path="create" />
-          <Section path="edit" title="Update" />
-          <Section path="edit/1" title="Update with param" />
-          <Section path="delete" title="Delete" />
+          <UserNew path="create" />
+          <UserEdit path="edit/:id" />
+          <UserDelete path="delete/:id" />
           <Section default title="Not found" />
         </Router>
       </DashboardSectionContent>
