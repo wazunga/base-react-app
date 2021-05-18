@@ -26,11 +26,21 @@ export const UsersForm = ({
   >
     <Form className="flex flex-col pt-3 md:pt-2">
       <Inputs label="Nombre" value="Nombre" FieldType="text" name="user_name" />
-      <Inputs label="Username" value="Username" FieldType="text" name="user_username" />
+      <Inputs
+        label="Username"
+        value="Username"
+        FieldType="text"
+        name="user_username"
+      />
       <Inputs label="Rol" value="Rol" FieldType="text" name="user_role" />
-      <Inputs label="Estado" value="Estado" FieldType="text" name="user_status" />
+      <Inputs
+        label="Estado"
+        value="Estado"
+        FieldType="text"
+        name="user_status"
+      />
 
-      <FormButtons moduleName='users' />
+      <FormButtons moduleName="users" />
     </Form>
   </Formik>
 )

@@ -16,5 +16,5 @@ export const userValidationSchema = Yup.object({
   user_status: Yup.string()
     .max(25, 'Caracteres maximos 25')
     .min(5, 'Caracteres minimos 5')
-    .required('Required'),
+    .required('Required')
 })

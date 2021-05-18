@@ -6,13 +6,13 @@ import { USERS_DATA } from '../../../../data/store'
 export const UserDelete = ({ id }) => {
   const navigate = useNavigate()
 
-  const handleNavigate = async event => {
+  const handleNavigate = async (event) => {
     event.preventDefault()
     navigate('../')
   }
 
-  const userToDelete = USERS_DATA.find(user => (
-    user.user_id.toString() === id ? user : undefined)
+  const userToDelete = USERS_DATA.find((user) =>
+    user.user_id.toString() === id ? user : undefined
   )
 
   return (

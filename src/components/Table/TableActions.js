@@ -18,9 +18,10 @@ export const TableActions = ({ data }) => {
         >
           <PencilIcon />
         </Link>
-        <Link 
-        to={`./delete/${data.user_id}`}
-        className="w-4 mr-2 transform hover:text-purple-500 hover:scale-110">
+        <Link
+          to={`./delete/${data.user_id}`}
+          className="w-4 mr-2 transform hover:text-purple-500 hover:scale-110"
+        >
           <TrashIcon />
         </Link>
       </div>

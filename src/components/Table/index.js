@@ -19,7 +19,7 @@ export const Table = ({ data, headers, keys, PER_PAGE = 5 }) => {
   }
 
   // const offset = currentPage * PER_PAGE
-  const offset = search.length > 0 ? 0 :  currentPage * PER_PAGE
+  const offset = search.length > 0 ? 0 : currentPage * PER_PAGE
   const currentPageData = searchResult
     .slice(offset, offset + PER_PAGE)
     .map((row, key) => (
@@ -47,7 +47,7 @@ export const Table = ({ data, headers, keys, PER_PAGE = 5 }) => {
             </td>
           )
         })}
-        <TableActions key={key} data={row}/>
+        <TableActions key={key} data={row} />
       </tr>
     ))
 

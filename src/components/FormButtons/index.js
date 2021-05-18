@@ -10,7 +10,7 @@ export const FormButtons = ({ moduleName }) => (
           className="w-5/6 p-2 mx-auto mt-5 text-base font-bold text-white bg-blue-500 border-black rounded-lg md:text-base lg:text-lg focus:outline-none lg:w-3/4 hover:opacity-90 transform hover:scale-105"
         >
           Guardar usuario
-            </button>
+        </button>
       </div>
       <Link
         to={`/dashboard/${moduleName}`}
@@ -21,7 +21,7 @@ export const FormButtons = ({ moduleName }) => (
           className="w-5/6 p-2 mx-auto mt-5 text-base font-bold text-white bg-red-500 border-black rounded-lg md:text-base lg:text-lg focus:outline-none lg:w-3/4 hover:opacity-90 transform hover:scale-105"
         >
           Cancelar
-            </button>
+        </button>
       </Link>
     </div>
   </div>
