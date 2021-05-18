@@ -47,7 +47,7 @@ export const Table = ({ data, headers, keys, PER_PAGE = 5 }) => {
             </td>
           )
         })}
-        <TableActions key={key} />
+        <TableActions key={key} data={row}/>
       </tr>
     ))
 
