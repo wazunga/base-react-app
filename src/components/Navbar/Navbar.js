@@ -1,14 +1,12 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React, { useState } from 'react'
 import { NavbarCompanyInfo } from './NavbarCompanyInfo'
 import { NavbarButtons } from './NavbarButtons'
-import { useIsOpen } from '../../hooks/useIsOpen'
-import { MenuIcon, XIcon } from '@heroicons/react/outline'
+import { LoginIcon, MenuIcon } from '@heroicons/react/outline'
 
-export const Navbar = (props) => {
-  const [isOpen, handleIsOpen] = useIsOpen(false)
+export const Navbar = ({ logo, companyName }) => {
+  const [navbarOpen, setNavbarOpen] = useState(false)
   const NavbarMain = ({ children }) => (
-    <nav className="fixed z-50 flex flex-wrap items-center justify-between block w-screen px-4 py-3 bg-green-700">
+    <nav className="relative flex flex-wrap items-center justify-between px-4 py-3">
       {children}
     </nav>
   )
@@ -20,24 +18,16 @@ export const Navbar = (props) => {
   return (
     <NavbarMain>
       <NavbarCompany>
-        <NavbarCompanyInfo {...props} />
+        <NavbarCompanyInfo logo={logo} companyName={companyName} />
         <button
-          className="block w-12 px-3 py-1 mr-3 text-xl leading-none text-black bg-transparent border border-transparent border-solid rounded outline-none cursor-pointer hover:opacity-50 lg:hidden focus:outline-none"
+          className="block w-12 px-3 py-1 text-xl leading-none text-black bg-transparent border border-transparent border-solid rounded outline-none cursor-pointer lg:hidden focus:outline-none"
           type="button"
-          onClick={handleIsOpen}
+          onClick={() => setNavbarOpen(!navbarOpen)}
         >
-          {isOpen ? (
-            <XIcon alt="menu" className="w-8" />
-          ) : (
-            <MenuIcon alt="menu" className="w-8" />
-          )}
+          <MenuIcon />
         </button>
       </NavbarCompany>
-      <NavbarButtons isOpen={isOpen} />
+      <NavbarButtons navbarOpen={navbarOpen} LoginIcon={LoginIcon} />
     </NavbarMain>
   )
-}
-NavbarCompanyInfo.propTypes = {
-  companyLogo: PropTypes.string.isRequired,
-  companyName: PropTypes.string.isRequired
 }

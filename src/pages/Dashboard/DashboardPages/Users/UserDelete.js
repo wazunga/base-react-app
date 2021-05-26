@@ -1,9 +1,8 @@
 import { useNavigate } from '@reach/router'
 import React from 'react'
 import { Modal } from '../../../../components/Modal'
-import { USERS_DATA } from '../../../../data/store'
 
-export const UserDelete = ({ id }) => {
+export const UserDelete = ({ id, users }) => {
   const navigate = useNavigate()
 
   const handleNavigate = async (event) => {
@@ -11,7 +10,7 @@ export const UserDelete = ({ id }) => {
     navigate('../')
   }
 
-  const userToDelete = USERS_DATA.find((user) =>
+  const userToDelete = users.find((user) =>
     user.user_id.toString() === id ? user : undefined
   )
 

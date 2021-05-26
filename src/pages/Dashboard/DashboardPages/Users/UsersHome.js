@@ -1,7 +1,13 @@
 import React from 'react'
-import { USERS_DATA, USERS_KEYS } from '../../../../data/store'
 import { Table } from '../../../../components/Table'
+import { UserSchema } from '../../../../schema'
 
-export const UsersHome = ({ headers }) => (
-  <Table headers={headers} data={USERS_DATA} keys={USERS_KEYS} />
-)
+export const UsersHome = ({ users }) => {
+  return (
+    <Table
+      headers={UserSchema.tableHeaders}
+      data={users}
+      keys={UserSchema.keys}
+    />
+  )
+}

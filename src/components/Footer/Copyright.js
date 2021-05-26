@@ -1,5 +1,6 @@
 import React from 'react'
 import { CopyrightLink } from './CopyrightLink'
+import PropTypes from 'prop-types'
 
 export const Copyright = ({ companyName }) => {
   const CopyrightMain = ({ children }) => (
@@ -25,4 +26,8 @@ export const Copyright = ({ companyName }) => {
       </ul>
     </CopyrightMain>
   )
+}
+
+Copyright.propTypes = {
+  companyName: PropTypes.string.isRequired
 }
