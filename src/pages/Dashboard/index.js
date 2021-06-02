@@ -11,28 +11,31 @@ import { Users } from './DashboardPages/Users'
 import { Home } from './DashboardPages/Home'
 
 const Section = ({ title }) => (
-  <div className="bg-gray-50">
-    <h1 className="text-2xl">{title}</h1>
-  </div>
+	<div className="bg-gray-50">
+		<h1 className="text-2xl">{title}</h1>
+	</div>
 )
 
 Section.propTypes = {
-  title: PropTypes.string.isRequired
+	title: PropTypes.string.isRequired
 }
 
-export const Dashboard = () => (
-  <DashboardContainer>
-    <DashboardSidebar />
-    <DashboardContent>
-      <DashboardNav />
-      <DashboardMainContent>
-        <Router className="h-full">
-          <Home path="/" />
-          <Users path="users/*" />
-          <Test path="test" />
-          <Section title="Not found" default />
-        </Router>
-      </DashboardMainContent>
-    </DashboardContent>
-  </DashboardContainer>
-)
+export const Dashboard = () => {
+	
+	return (
+		<DashboardContainer>
+			<DashboardSidebar />
+			<DashboardContent>
+				<DashboardNav />
+				<DashboardMainContent>
+					<Router className="h-full">
+						<Home path="/" />
+						<Users path="users/*" />
+						<Test path="test" />
+						<Section title="Not found" default />
+					</Router>
+				</DashboardMainContent>
+			</DashboardContent>
+		</DashboardContainer>
+	)
+}

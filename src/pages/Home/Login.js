@@ -1,12 +1,11 @@
 import React, { useState } from 'react'
 import { Formik, Form, ErrorMessage, Field } from 'formik'
-import { UserSchema } from '../../schema'
-import { LoginValidationSchema } from '../../validations'
+import { LoginSchema } from '../../schema'
 import { Loader } from '../../components/Loader'
 import { navigate } from '@reach/router'
 import { useLocalStorage } from '../../hooks/useLocalStorage'
 import { connect } from 'react-redux'
-import { setToken } from '../../actions/users'
+import { setToken } from '../../redux/actions/usersActions'
 
 const Login = (props) => {
   const [loading, setLoading] = useState(false)
@@ -16,8 +15,8 @@ const Login = (props) => {
   return (
     <>
       <Formik
-        initialValues={UserSchema}
-        validationSchema={LoginValidationSchema}
+        initialValues={LoginSchema.initialValues}
+        validationSchema={LoginSchema.validations}
         onSubmit={async (values, { setSubmitting }) => {
           setLoading(true)
           try {
