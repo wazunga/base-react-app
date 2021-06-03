@@ -1,11 +1,7 @@
 export const user = (Yup) => ({
   validations: Yup.object({
-    user_name: Yup.string()
-      .max(25, 'Caracteres maximos 25')
-      .min(5, 'Caracteres minimos 5')
-      .required('Required'),
+    user_name: Yup.string().min(3, 'Caracteres minimos 5').required('Required'),
     user_password: Yup.string()
-      .max(30, 'Caracteres maximos 25')
       .min(8, 'Caracteres minimos 8')
       .required('Required'),
     user_role: Yup.number().required('Required'),

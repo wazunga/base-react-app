@@ -22,7 +22,6 @@ export const Input = ({ label, placeholder, type, name }) => (
 )
 
 Input.propTypes = {
-  value: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
   type: PropTypes.string.isRequired,
   placeholder: PropTypes.string.isRequired

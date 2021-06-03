@@ -13,31 +13,46 @@ import { USER_ACTIONS } from './types'
 }*/
 
 export const fetchUsers = (users) => ({
-	type: USER_ACTIONS.FETCH_USERS,
-	payload: users
+  type: USER_ACTIONS.FETCH_USERS,
+  payload: users
 })
 
 export const thunkFecthUsers = async (dispatch, _) => {
-	const users = await client.get({ resource: 'users' })
-	await dispatch({ type: USER_ACTIONS.FETCH_USERS, payload: users })
+  const users = await client.get({ resource: 'users' })
+  await dispatch({ type: USER_ACTIONS.FETCH_USERS, payload: users })
 }
 
 export const setToken = (token) => ({
-	type: USER_ACTIONS.SET_TOKEN,
-	payload: token
+  type: USER_ACTIONS.SET_TOKEN,
+  payload: token
 })
 
 export const saveUser = async (dispatch, getState) => {
-	let	state = getState()
-	const userData = state.users.current
-	const newUser = await client.post({ resource: 'users/signin', body: userData })
-	console.log('before', state.users.data)
-	dispatch({ type: USER_ACTIONS.SAVE_USER, payload: newUser })
-	state = getState()
-	console.log('after', state.users.data)
+  let state = getState()
+  const userData = state.users.current
+  const newUser = await client.post({
+    resource: 'users/signin',
+    body: userData
+  })
+  console.log('before', state.users.data)
+  dispatch({ type: USER_ACTIONS.SAVE_USER, payload: newUser })
+  state = getState()
+  console.log('after', state.users.data)
+}
+
+export const updateUser = async (dispatch, getState) => {
+  let state = getState()
+  const userData = state.users.current
+  const updatedUser = await client.put({ body: userData, resource: 'users' })
+  console.log('updated', updatedUser)
+  dispatch({
+    type: USER_ACTIONS.UPDATE_USER,
+    payload: updatedUser,
+    id: updatedUser.user_id
+  })
 }
 
 export const setCurrentUser = (user) => ({
-	type: USER_ACTIONS.SET_CURRENT_USER,
-	payload: user
+  type: USER_ACTIONS.SET_CURRENT_USER,
+  payload: user
 })

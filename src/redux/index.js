@@ -6,8 +6,4 @@ import { composeWithDevTools } from 'redux-devtools-extension'
 const composedEnhancer = composeWithDevTools(applyMiddleware(thunkMiddleware))
 const reducer = combineReducers({ users })
 
-export const configureStore = () =>
-	createStore(
-		reducer,
-		composedEnhancer
-	)
+export const configureStore = () => createStore(reducer, composedEnhancer)
