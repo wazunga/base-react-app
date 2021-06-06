@@ -7,7 +7,7 @@ import { TableSearch } from './TableSearch'
 import { useTableSearch } from '../../hooks/useTableSearch'
 import './index.css'
 
-export const Table = ({ data, headers, keys, PER_PAGE = 5 }) => {
+export const Table = ({ data, headers, keys, PER_PAGE = 5, idKey }) => {
   // paginator state
   const [currentPage, setCurrentPage] = useState(0)
   // table search state
@@ -47,7 +47,7 @@ export const Table = ({ data, headers, keys, PER_PAGE = 5 }) => {
             </td>
           )
         })}
-        <TableActions key={key} data={row} />
+        <TableActions key={key} data={row} idKey={idKey} />
       </tr>
     ))
 

@@ -27,7 +27,7 @@ Modal.propTypes = {
   title: PropTypes.string.isRequired,
   content: PropTypes.string.isRequired,
   onClose: PropTypes.func.isRequired,
-  onAction: PropTypes.func.isRequired,
+  toDispatch: PropTypes.func.isRequired,
   isOpen: PropTypes.bool.isRequired,
   type: PropTypes.oneOf(['confirm', 'delete'])
 }

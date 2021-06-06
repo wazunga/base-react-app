@@ -1,27 +1,39 @@
+import React, {useEffect} from 'react'
 import { useNavigate } from '@reach/router'
-import React from 'react'
+import { useDispatch } from 'react-redux'
 import { Modal } from '../../../../components/Modal'
+import { setCurrentUser, deleteUser } from '../../../../redux/actions/usersActions'
 
 export const UserDelete = ({ id, users }) => {
-  const navigate = useNavigate()
+	const navigate = useNavigate()
+	const dispatch = useDispatch()
 
-  const handleNavigate = async (event) => {
-    event.preventDefault()
-    navigate('../')
-  }
+	const handleNavigate = async (event) => {
+		event.preventDefault()
+		navigate('../')
+	}
 
-  const userToDelete = users.find((user) =>
-    user.user_id.toString() === id ? user : undefined
-  )
+	const userToDelete = users.find((user) =>
+		user.user_id.toString() === id ? user : undefined
+	)
 
-  return (
-    <Modal
-      content={`Esta seguro de desea eliminar el usuario: ${userToDelete.user_name}`}
-      isOpen={true}
-      title="Eliminar Usuario"
-      onAction={handleNavigate}
-      onClose={handleNavigate}
-      type="delete"
-    />
-  )
+	useEffect(() => {
+		// se guarda en el estado el usuario a borrar
+		dispatch(setCurrentUser(userToDelete))
+	}, [dispatch, userToDelete])
+
+	const msg = userToDelete ? userToDelete.user_name : 'recurso'
+
+	return (
+		<Modal
+			content={`Esta seguro de desea eliminar el ${msg}`}
+			isOpen={true}
+			title="Eliminar Usuario"
+			module="users"
+			toDispatch={deleteUser}
+			onAction={handleNavigate}
+			onClose={handleNavigate}
+			type="delete"
+		/>
+	)
 }

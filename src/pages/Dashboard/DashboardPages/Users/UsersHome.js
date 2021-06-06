@@ -8,6 +8,7 @@ export const UsersHome = ({ users }) => {
       headers={UserSchema.tableHeaders}
       data={users}
       keys={UserSchema.keys}
+			idKey="user_id"
     />
   )
 }
