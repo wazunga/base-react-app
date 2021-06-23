@@ -8,7 +8,7 @@ export const UsersForm = ({ user, ...props }) => (
     initialValues={user}
     schema={UserSchema}
     setCurrent={setCurrentUser}
-    currentPath="users"
+    moduleName="users"
     {...props}
   />
 )

@@ -7,7 +7,7 @@ export const TableActions = ({ data, idKey }) => {
     <td className="px-6 py-3 whitespace-nowrap">
       <div className="flex items-center justify-center">
         <Link
-					to={`./view/${data[idKey]}`}
+          to={`./view/${data[idKey]}`}
           className="w-4 mr-2 transform hover:text-purple-500 hover:scale-110"
         >
           <EyeIcon />

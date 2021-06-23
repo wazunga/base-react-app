@@ -1,10 +1,15 @@
 import React from 'react'
 import PropTypes, { object } from 'prop-types'
 import { Link } from '@reach/router'
-import { HomeIcon, ChevronDownIcon } from '@heroicons/react/outline'
+import { ChevronDownIcon, AdjustmentsIcon } from '@heroicons/react/outline'
 import { useDropdown } from '../../hooks/useDropdown'
 
-export const DashboardMenuItem = ({ title, path, links }) => {
+export const DashboardMenuItem = ({
+  title,
+  path,
+  links,
+  Icon = AdjustmentsIcon
+}) => {
   const [isDropdownOPen, onClickDropdown, openClasses] = useDropdown()
 
   return (
@@ -17,7 +22,7 @@ export const DashboardMenuItem = ({ title, path, links }) => {
           {/* Module icon*/}
           <span>
             {' '}
-            <HomeIcon className="w-5 h-5" />{' '}
+            <Icon className="w-5 h-5" />{' '}
           </span>
           <span className="ml-2 text-sm">{title}</span>
         </Link>

@@ -7,3 +7,4 @@ export const TestRoutes = [
   { path: '/', title: 'action 1' },
   { path: '/', title: 'action 2' }
 ]
+

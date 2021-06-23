@@ -19,8 +19,8 @@ const Section = ({ title }) => (
 )
 
 const usersSelector = createSelector(
-	(state) => state.users.data,
-	(data) => data.filter((user) => user.user_status !== 2)
+  (state) => state.users.data,
+  (data) => data.filter((user) => user.user_status !== 2)
 )
 
 export const Users = () => {

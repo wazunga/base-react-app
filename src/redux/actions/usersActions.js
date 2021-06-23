@@ -52,17 +52,17 @@ export const updateUser = async (dispatch, getState) => {
   })
 }
 
-export const deleteUser = async(dispatch, getState) => {
+export const deleteUser = async (dispatch, getState) => {
   let state = getState()
   const userData = state.users.current
-	const deletedUser = await client.delete({ body: userData, resource: 'users' })
+  const deletedUser = await client.delete({ body: userData, resource: 'users' })
   console.log('before', state.users.data)
-	dispatch({
-		type: USER_ACTIONS.DELETE_USER,
-		payload: deletedUser,
-		id: userData.user_id
-	})
-	state = getState()
+  dispatch({
+    type: USER_ACTIONS.DELETE_USER,
+    payload: deletedUser,
+    id: userData.user_id
+  })
+  state = getState()
   console.log('after', state.users.data)
 }
 

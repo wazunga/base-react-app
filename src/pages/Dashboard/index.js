@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import PropTypes from 'prop-types'
+import { useDispatch } from 'react-redux'
 import { Router } from '@reach/router'
 import { DashboardNav } from '../../components/DashboardNav'
 import { DashboardSidebar } from '../../components/DashboardSidebar'
@@ -11,7 +12,6 @@ import { Users } from './DashboardPages/Users'
 import { Home } from './DashboardPages/Home'
 import { thunkFecthUsers } from '../../redux/actions/usersActions'
 import { WobblingLoader } from '../../components/WobblingLoader'
-import { useDispatch } from 'react-redux'
 
 const Section = ({ title }) => (
   <div className="bg-gray-50">
